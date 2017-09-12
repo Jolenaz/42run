@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Vec4.class.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/12 17:04:35 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/12 17:04:36 by jbelless         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Vec4.class.hpp"
 
 Vec4::Vec4(void) : x(0.0f), y(0.0f), z(0.0f), w(0.0f){}
@@ -20,10 +32,6 @@ Vec4 & Vec4::operator=(Vec4 const & rhs){
     this->z = rhs.z;
     this->w = rhs.w;
     return *this;
-}
-
-Vec4 Vec4::operator+(Vec4 const & rhs) const{
-    return Vec4(this->x + rhs.x, this->y + rhs.y, this->z + rhs.z, this->w + rhs.w);
 }
 
 std::ostream & operator<<(std::ostream & o, Vec4 const & i){

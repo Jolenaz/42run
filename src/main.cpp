@@ -14,10 +14,8 @@
 
 int main()
 {
-    Vec2 lala(45,45);
-
-    Vec2 lolo(100.453,100.1);
-
-    std::cout << lala + lolo << std::endl;
+    std::cout << "z : " << Vec3::cross(Vec3(1,0,0),Vec3(0,1,0)) << std::endl;
+    std::cout << "-y : " << Vec3::cross(Vec3(1,0,0),Vec3(0,0,1)) << std::endl;
+    std::cout << "-x : " << Vec3(0,0,1).cross(Vec3(0,1,0)).normalize() << std::endl;
     return (0);
 }

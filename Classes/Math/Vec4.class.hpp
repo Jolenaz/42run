@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Vec4.class.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/12 17:04:43 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/12 17:04:45 by jbelless         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #include <iostream>
-#include "math.hpp"
+#include "joMath.hpp"
+
+class Vec3;
 
 class Vec4{
 
@@ -26,7 +40,7 @@ public:
 
 // functions
 
-    Vec4 operator+(Vec4 const & src) const;
+    //Vec4 & operator*(Mat4 const & src);
 
 };
 

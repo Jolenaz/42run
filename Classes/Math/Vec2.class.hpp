@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Vec2.class.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/12 17:03:54 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/12 17:03:56 by jbelless         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #include <iostream>
-#include "math.hpp"
+#include "joMath.hpp"
 
 class Vec2{
 
@@ -15,14 +27,25 @@ public:
     Vec2 & operator=(Vec2 const & src);
 
 
-// variables
+// attribus
 
     float x;
     float y;
 
-// functions
+// fonctions membres
 
-    Vec2 operator+(Vec2 const & src) const;
+    Vec2    operator+(Vec2 const & src) const;
+    Vec2    operator-(Vec2 const & src) const;
+    Vec2    operator*(float const & src) const;
+    float   dot(Vec2 const & vec);
+    float   magnitude(void);
+    float   sqrMagnitude(void);
+    Vec2    & normalize();
+    
+
+// fonctions non membres
+
+    static float dot(Vec2 const & vec1, Vec2 const & vec2);
 
 };
 

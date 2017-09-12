@@ -5,24 +5,24 @@ CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: Classes/Math/Vec2.class.cpp
 CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: Classes/Math/Vec2.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: Classes/Math/Vec3.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: Classes/Math/Vec4.class.hpp
-CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: include/math.hpp
+CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o: include/joMath.hpp
 
 CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: Classes/Math/Vec3.class.cpp
 CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: Classes/Math/Vec3.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: Classes/Math/Vec2.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: Classes/Math/Vec4.class.hpp
-CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: include/math.hpp
+CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o: include/joMath.hpp
 
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: Classes/Math/Vec4.class.cpp
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: Classes/Math/Vec4.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: Classes/Math/Vec2.class.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: Classes/Math/Vec3.class.hpp
-CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: include/math.hpp
+CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o: include/joMath.hpp
 
 CMakeFiles/42run.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/42run.dir/src/main.cpp.o: Classes/Math/Vec2.class.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: Classes/Math/Vec3.class.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: Classes/Math/Vec4.class.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: include/42run.hpp
-CMakeFiles/42run.dir/src/main.cpp.o: include/math.hpp
+CMakeFiles/42run.dir/src/main.cpp.o: include/joMath.hpp
 

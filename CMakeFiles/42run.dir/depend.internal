@@ -6,23 +6,23 @@ CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o
  /Users/jbelless/42run/Classes/Math/Vec2.class.hpp
  Classes/Math/Vec3.class.hpp
  Classes/Math/Vec4.class.hpp
- include/math.hpp
+ include/joMath.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o
  /Users/jbelless/42run/Classes/Math/Vec3.class.cpp
  /Users/jbelless/42run/Classes/Math/Vec3.class.hpp
  Classes/Math/Vec2.class.hpp
  Classes/Math/Vec4.class.hpp
- include/math.hpp
+ include/joMath.hpp
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o
  /Users/jbelless/42run/Classes/Math/Vec4.class.cpp
  /Users/jbelless/42run/Classes/Math/Vec4.class.hpp
  Classes/Math/Vec2.class.hpp
  Classes/Math/Vec3.class.hpp
- include/math.hpp
+ include/joMath.hpp
 CMakeFiles/42run.dir/src/main.cpp.o
  /Users/jbelless/42run/src/main.cpp
  Classes/Math/Vec2.class.hpp
  Classes/Math/Vec3.class.hpp
  Classes/Math/Vec4.class.hpp
  include/42run.hpp
- include/math.hpp
+ include/joMath.hpp

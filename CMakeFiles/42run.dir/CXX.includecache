@@ -13,8 +13,8 @@ Vec2.class.hpp
 /Users/jbelless/42run/Classes/Math/Vec2.class.hpp
 iostream
 -
-math.hpp
-/Users/jbelless/42run/Classes/Math/math.hpp
+joMath.hpp
+/Users/jbelless/42run/Classes/Math/joMath.hpp
 
 /Users/jbelless/42run/Classes/Math/Vec3.class.cpp
 Vec3.class.hpp
@@ -23,8 +23,8 @@ Vec3.class.hpp
 /Users/jbelless/42run/Classes/Math/Vec3.class.hpp
 iostream
 -
-math.hpp
-/Users/jbelless/42run/Classes/Math/math.hpp
+joMath.hpp
+/Users/jbelless/42run/Classes/Math/joMath.hpp
 
 /Users/jbelless/42run/Classes/Math/Vec4.class.cpp
 Vec4.class.hpp
@@ -33,8 +33,8 @@ Vec4.class.hpp
 /Users/jbelless/42run/Classes/Math/Vec4.class.hpp
 iostream
 -
-math.hpp
-/Users/jbelless/42run/Classes/Math/math.hpp
+joMath.hpp
+/Users/jbelless/42run/Classes/Math/joMath.hpp
 
 /Users/jbelless/42run/src/main.cpp
 42run.hpp
@@ -43,28 +43,30 @@ math.hpp
 Classes/Math/Vec2.class.hpp
 iostream
 -
-math.hpp
-Classes/Math/math.hpp
+joMath.hpp
+Classes/Math/joMath.hpp
 
 Classes/Math/Vec3.class.hpp
 iostream
 -
-math.hpp
-Classes/Math/math.hpp
+joMath.hpp
+Classes/Math/joMath.hpp
 
 Classes/Math/Vec4.class.hpp
 iostream
 -
-math.hpp
-Classes/Math/math.hpp
+joMath.hpp
+Classes/Math/joMath.hpp
 
 include/42run.hpp
 iostream
 -
-math.hpp
-include/math.hpp
+joMath.hpp
+include/joMath.hpp
 
-include/math.hpp
+include/joMath.hpp
+cmath
+-
 Vec2.class.hpp
 include/Vec2.class.hpp
 Vec3.class.hpp
