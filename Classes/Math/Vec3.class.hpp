@@ -42,13 +42,22 @@ public:
 // fonctions membres
 
     Vec3 operator+(Vec3 const & src) const;
+    void operator+=(Vec3 const & src);
     Vec3 operator-(Vec3 const & src) const;
+    void operator-=(Vec3 const & src);
     Vec3 operator*(float const & src) const;
+    void operator*=(float const & src);
+    Vec3 operator/(float const & src) const;
+    void operator/=(float const & src);
+    bool operator==(Vec3 const & rhs);
+    float  & operator[](int const i);
     float dot(Vec3 const & vec);
     float magnitude();
     float sqrMagnitude();
     Vec3 & normalize();
     Vec3 cross(Vec3 const & vec);
+
+
 
 // fonctions non membres
 

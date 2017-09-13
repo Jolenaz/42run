@@ -153,12 +153,137 @@ CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o.provides: CMakeFiles/42run.di
 CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o
 
 
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o: Classes/Math/Mat2.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o -c /Users/jbelless/42run/Classes/Math/Mat2.class.cpp
+
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Math/Mat2.class.cpp > CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Math/Mat2.class.cpp -o CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o
+
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o: Classes/Math/Mat3.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o -c /Users/jbelless/42run/Classes/Math/Mat3.class.cpp
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Math/Mat3.class.cpp > CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Math/Mat3.class.cpp -o CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o
+
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o: Classes/Math/Mat4.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o -c /Users/jbelless/42run/Classes/Math/Mat4.class.cpp
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Math/Mat4.class.cpp > CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Math/Mat4.class.cpp -o CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o
+
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o: Classes/Render/Camera.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o -c /Users/jbelless/42run/Classes/Render/Camera.class.cpp
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Render/Camera.class.cpp > CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Render/Camera.class.cpp -o CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o
+
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.o: Classes/Transform.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Transform.class.cpp.o -c /Users/jbelless/42run/Classes/Transform.class.cpp
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Transform.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Transform.class.cpp > CMakeFiles/42run.dir/Classes/Transform.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Transform.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Transform.class.cpp -o CMakeFiles/42run.dir/Classes/Transform.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o
+
+
 # Object files for target 42run
 42run_OBJECTS = \
 "CMakeFiles/42run.dir/src/main.cpp.o" \
 "CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o" \
 "CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o" \
-"CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o"
+"CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
 
 # External object files for target 42run
 42run_EXTERNAL_OBJECTS =
@@ -167,9 +292,14 @@ CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o.provides.build: CMakeFiles/42
 42run: CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o
 42run: CMakeFiles/42run.dir/build.make
 42run: CMakeFiles/42run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable 42run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable 42run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/42run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +311,11 @@ CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/src/main.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Vec2.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Vec3.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.requires
 
 .PHONY : CMakeFiles/42run.dir/requires
 

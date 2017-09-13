@@ -11,6 +11,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(Classes)
 include_directories(Classes/Math)
+include_directories(Classes/Render)
 include_directories(include)
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
@@ -20,6 +21,11 @@ set(SOURCE_FILES
 	Classes/Math/Vec2.class.cpp
 	Classes/Math/Vec3.class.cpp
 	Classes/Math/Vec4.class.cpp
+	Classes/Math/Mat2.class.cpp
+	Classes/Math/Mat3.class.cpp
+	Classes/Math/Mat4.class.cpp
+	Classes/Render/Camera.class.cpp
+	Classes/Transform.class.cpp
 	)
 
 add_executable(42run ${SOURCE_FILES})

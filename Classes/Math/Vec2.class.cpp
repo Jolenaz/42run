@@ -30,17 +30,58 @@ Vec2 Vec2::operator+(Vec2 const & rhs) const{
     return Vec2(this->x + rhs.x, this->y + rhs.y);
 }
 
+void Vec2::operator+=(Vec2 const & rhs){
+    this->x += rhs.x;
+    this->y += rhs.y;
+}
+
 Vec2 Vec2::operator-(Vec2 const & rhs) const{
     return Vec2(this->x - rhs.x, this->y - rhs.y);
+}
+
+void Vec2::operator-=(Vec2 const & rhs){
+    this->x -= rhs.x;
+    this->y -= rhs.y;
 }
 
 Vec2 Vec2::operator*(float const & num) const{
     return Vec2(this->x * num, this->y * num);
 }
 
+void Vec2::operator*=(float const & num){
+    this->x *= num;
+    this->y *= num;
+}
+
+Vec2 Vec2::operator/(float const & num) const{
+    return Vec2(this->x / num, this->y / num);
+}
+
+void Vec2::operator/=(float const & num){
+    this->x /= num;
+    this->y /= num;
+}
+
+bool Vec2::operator==(Vec2 const & rhs)
+{
+    return (this->x == rhs.x && this->y == rhs.y);
+}
+
 std::ostream & operator<<(std::ostream & o, Vec2 const & i){
     o << "( " << i.x << " , " << i.y << " )";
     return o;
+}
+
+float &  Vec2::operator[](int const i) {
+    if (i == 0)
+        return this->x;
+    else if (i == 1)
+        return this->y;
+    else
+    {
+        std::cout << "Error: mauvais indice pour acceder au Vec" << std::endl;
+        return (this->y);
+    }
 }
 
 float Vec2::dot(Vec2 const & vec)

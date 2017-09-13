@@ -35,13 +35,21 @@ public:
 // fonctions membres
 
     Vec2    operator+(Vec2 const & src) const;
+    void    operator+=(Vec2 const & src);
     Vec2    operator-(Vec2 const & src) const;
+    void    operator-=(Vec2 const & src);
     Vec2    operator*(float const & src) const;
+    void    operator*=(float const & src);
+    Vec2    operator/(float const & src) const;
+    void    operator/=(float const & src);
+    bool    operator==(Vec2 const & src);
+    float   & operator[](int const i);
     float   dot(Vec2 const & vec);
     float   magnitude(void);
     float   sqrMagnitude(void);
     Vec2    & normalize();
     
+
 
 // fonctions non membres
 

@@ -46,12 +46,61 @@ Vec3 Vec3::operator+(Vec3 const & rhs) const{
     return Vec3(this->x + rhs.x, this->y + rhs.y, this->z + rhs.z);
 }
 
+void Vec3::operator+=(Vec3 const & rhs){
+    this->x += rhs.x;
+    this->y += rhs.y;
+    this->z += rhs.z;
+}
+
 Vec3 Vec3::operator-(Vec3 const & rhs) const{
     return Vec3(this->x - rhs.x, this->y - rhs.y, this->z - rhs.z);
 }
 
+void Vec3::operator-=(Vec3 const & rhs){
+    this->x -= rhs.x;
+    this->y -= rhs.y;
+    this->z -= rhs.z;
+}
+
 Vec3 Vec3::operator*(float const & num) const{
     return Vec3(this->x * num, this->y * num, this->z * num);
+}
+
+void Vec3::operator*=(float const & num){
+    this->x *= num;
+    this->y *= num;
+    this->z *= num;
+}
+
+Vec3 Vec3::operator/(float const & num) const{
+    return Vec3(this->x / num, this->y / num, this->z / num);
+}
+
+void Vec3::operator/=(float const & num){
+    this->x /= num;
+    this->y /= num;
+    this->z /= num;
+}
+
+float  & Vec3::operator[](int const i)
+{
+    if (i == 0)
+        return this->x;
+    if (i == 1)
+        return this->y;
+    if (i == 2)
+        return this->z;
+    std::cout << "Error: mauvais incide pour acceder a un vec3" << std::endl;
+    return this->z;
+}
+
+bool Vec3::operator==(Vec3 const & rhs)
+{
+    return (
+        this->x == rhs.x &&
+        this->y == rhs.y &&
+        this->z == rhs.z
+    );
 }
 
 std::ostream & operator<<(std::ostream & o, Vec3 const & i){

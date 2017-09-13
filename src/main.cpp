@@ -14,8 +14,13 @@
 
 int main()
 {
-    std::cout << "z : " << Vec3::cross(Vec3(1,0,0),Vec3(0,1,0)) << std::endl;
-    std::cout << "-y : " << Vec3::cross(Vec3(1,0,0),Vec3(0,0,1)) << std::endl;
-    std::cout << "-x : " << Vec3(0,0,1).cross(Vec3(0,1,0)).normalize() << std::endl;
+    Mat2 mat(1,2,3,4);
+    Mat2 mat2(5,6,7,8);
+
+    Vec2 Vec(2,0);
+
+    Vec[1] = 7;
+
+    std::cout << mat2 * Vec << std::endl;
     return (0);
 }

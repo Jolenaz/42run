@@ -15,3 +15,5 @@
 #include <iostream>
 
 #include "joMath.hpp"
+#include "Transform.class.hpp"
+#include "render.hpp"

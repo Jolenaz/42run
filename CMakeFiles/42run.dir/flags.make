@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/jbelless/42run/third-party/glad/include -I/Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2 -I/Users/jbelless/42run/Classes -I/Users/jbelless/42run/Classes/Math -I/Users/jbelless/42run/include 
+CXX_INCLUDES = -I/Users/jbelless/42run/third-party/glad/include -I/Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2 -I/Users/jbelless/42run/Classes -I/Users/jbelless/42run/Classes/Math -I/Users/jbelless/42run/Classes/Render -I/Users/jbelless/42run/include 
 

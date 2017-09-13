@@ -33,6 +33,27 @@ Vec4 & Vec4::operator=(Vec4 const & rhs){
     this->w = rhs.w;
     return *this;
 }
+bool    Vec4::operator==(Vec4 const & rhs)
+{
+    return (
+        this->x == rhs.x &&
+        this->y == rhs.y &&
+        this->z == rhs.z &&
+        this->w == rhs.w 
+    );
+}
+float  & Vec4::operator[](int const i){
+    if (i == 0)
+        return this->x;
+    if (i == 1)
+        return this->y;
+    if (i == 2)
+        return this->z;
+    if (i == 3)
+        return this->w;
+    std::cout << "Error mauvais indice pour acceder a un Vec4" << std::endl;
+    return this->w;
+}
 
 std::ostream & operator<<(std::ostream & o, Vec4 const & i){
     o << "( " << i.x << " , " << i.y << " , " << i.z << " , " << i.w << " )";

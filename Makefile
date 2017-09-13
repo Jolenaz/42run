@@ -123,6 +123,87 @@ depend:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/build
 .PHONY : 42run/fast
 
+Classes/Math/Mat2.class.o: Classes/Math/Mat2.class.cpp.o
+
+.PHONY : Classes/Math/Mat2.class.o
+
+# target to build an object file
+Classes/Math/Mat2.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o
+.PHONY : Classes/Math/Mat2.class.cpp.o
+
+Classes/Math/Mat2.class.i: Classes/Math/Mat2.class.cpp.i
+
+.PHONY : Classes/Math/Mat2.class.i
+
+# target to preprocess a source file
+Classes/Math/Mat2.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.i
+.PHONY : Classes/Math/Mat2.class.cpp.i
+
+Classes/Math/Mat2.class.s: Classes/Math/Mat2.class.cpp.s
+
+.PHONY : Classes/Math/Mat2.class.s
+
+# target to generate assembly for a file
+Classes/Math/Mat2.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.s
+.PHONY : Classes/Math/Mat2.class.cpp.s
+
+Classes/Math/Mat3.class.o: Classes/Math/Mat3.class.cpp.o
+
+.PHONY : Classes/Math/Mat3.class.o
+
+# target to build an object file
+Classes/Math/Mat3.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o
+.PHONY : Classes/Math/Mat3.class.cpp.o
+
+Classes/Math/Mat3.class.i: Classes/Math/Mat3.class.cpp.i
+
+.PHONY : Classes/Math/Mat3.class.i
+
+# target to preprocess a source file
+Classes/Math/Mat3.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.i
+.PHONY : Classes/Math/Mat3.class.cpp.i
+
+Classes/Math/Mat3.class.s: Classes/Math/Mat3.class.cpp.s
+
+.PHONY : Classes/Math/Mat3.class.s
+
+# target to generate assembly for a file
+Classes/Math/Mat3.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.s
+.PHONY : Classes/Math/Mat3.class.cpp.s
+
+Classes/Math/Mat4.class.o: Classes/Math/Mat4.class.cpp.o
+
+.PHONY : Classes/Math/Mat4.class.o
+
+# target to build an object file
+Classes/Math/Mat4.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o
+.PHONY : Classes/Math/Mat4.class.cpp.o
+
+Classes/Math/Mat4.class.i: Classes/Math/Mat4.class.cpp.i
+
+.PHONY : Classes/Math/Mat4.class.i
+
+# target to preprocess a source file
+Classes/Math/Mat4.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.i
+.PHONY : Classes/Math/Mat4.class.cpp.i
+
+Classes/Math/Mat4.class.s: Classes/Math/Mat4.class.cpp.s
+
+.PHONY : Classes/Math/Mat4.class.s
+
+# target to generate assembly for a file
+Classes/Math/Mat4.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.s
+.PHONY : Classes/Math/Mat4.class.cpp.s
+
 Classes/Math/Vec2.class.o: Classes/Math/Vec2.class.cpp.o
 
 .PHONY : Classes/Math/Vec2.class.o
@@ -204,6 +285,60 @@ Classes/Math/Vec4.class.cpp.s:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Math/Vec4.class.cpp.s
 .PHONY : Classes/Math/Vec4.class.cpp.s
 
+Classes/Render/Camera.class.o: Classes/Render/Camera.class.cpp.o
+
+.PHONY : Classes/Render/Camera.class.o
+
+# target to build an object file
+Classes/Render/Camera.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o
+.PHONY : Classes/Render/Camera.class.cpp.o
+
+Classes/Render/Camera.class.i: Classes/Render/Camera.class.cpp.i
+
+.PHONY : Classes/Render/Camera.class.i
+
+# target to preprocess a source file
+Classes/Render/Camera.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.i
+.PHONY : Classes/Render/Camera.class.cpp.i
+
+Classes/Render/Camera.class.s: Classes/Render/Camera.class.cpp.s
+
+.PHONY : Classes/Render/Camera.class.s
+
+# target to generate assembly for a file
+Classes/Render/Camera.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.s
+.PHONY : Classes/Render/Camera.class.cpp.s
+
+Classes/Transform.class.o: Classes/Transform.class.cpp.o
+
+.PHONY : Classes/Transform.class.o
+
+# target to build an object file
+Classes/Transform.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Transform.class.cpp.o
+.PHONY : Classes/Transform.class.cpp.o
+
+Classes/Transform.class.i: Classes/Transform.class.cpp.i
+
+.PHONY : Classes/Transform.class.i
+
+# target to preprocess a source file
+Classes/Transform.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Transform.class.cpp.i
+.PHONY : Classes/Transform.class.cpp.i
+
+Classes/Transform.class.s: Classes/Transform.class.cpp.s
+
+.PHONY : Classes/Transform.class.s
+
+# target to generate assembly for a file
+Classes/Transform.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Transform.class.cpp.s
+.PHONY : Classes/Transform.class.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -240,6 +375,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... 42run"
+	@echo "... Classes/Math/Mat2.class.o"
+	@echo "... Classes/Math/Mat2.class.i"
+	@echo "... Classes/Math/Mat2.class.s"
+	@echo "... Classes/Math/Mat3.class.o"
+	@echo "... Classes/Math/Mat3.class.i"
+	@echo "... Classes/Math/Mat3.class.s"
+	@echo "... Classes/Math/Mat4.class.o"
+	@echo "... Classes/Math/Mat4.class.i"
+	@echo "... Classes/Math/Mat4.class.s"
 	@echo "... Classes/Math/Vec2.class.o"
 	@echo "... Classes/Math/Vec2.class.i"
 	@echo "... Classes/Math/Vec2.class.s"
@@ -249,6 +393,12 @@ help:
 	@echo "... Classes/Math/Vec4.class.o"
 	@echo "... Classes/Math/Vec4.class.i"
 	@echo "... Classes/Math/Vec4.class.s"
+	@echo "... Classes/Render/Camera.class.o"
+	@echo "... Classes/Render/Camera.class.i"
+	@echo "... Classes/Render/Camera.class.s"
+	@echo "... Classes/Transform.class.o"
+	@echo "... Classes/Transform.class.i"
+	@echo "... Classes/Transform.class.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

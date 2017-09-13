@@ -39,8 +39,8 @@ public:
     float w;
 
 // functions
-
-    //Vec4 & operator*(Mat4 const & src);
+    float  & operator[](int const i);
+    bool    operator==(Vec4 const & rhs);
 
 };
 
