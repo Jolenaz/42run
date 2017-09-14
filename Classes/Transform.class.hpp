@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Transform.class.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/14 11:10:23 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/14 11:10:29 by jbelless         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #pragma once
 #include "joMath.hpp"
@@ -18,10 +29,10 @@ class Transform{
     Vec3 position;
     Vec3 rotation;
     Vec3 scale;
-    Mat4 worldToLocal;
 
     Transform * parent;
 
+    Mat4 get_worldToLocal( void );
 
     // fonctions membres
 
@@ -31,6 +42,7 @@ class Transform{
 
     private:
 
+    Mat4    _worldToLocal;
     void    _updateMatrix();
 
 

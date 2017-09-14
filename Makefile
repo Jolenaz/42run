@@ -123,6 +123,33 @@ depend:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/build
 .PHONY : 42run/fast
 
+Classes/GameObject.class.o: Classes/GameObject.class.cpp.o
+
+.PHONY : Classes/GameObject.class.o
+
+# target to build an object file
+Classes/GameObject.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o
+.PHONY : Classes/GameObject.class.cpp.o
+
+Classes/GameObject.class.i: Classes/GameObject.class.cpp.i
+
+.PHONY : Classes/GameObject.class.i
+
+# target to preprocess a source file
+Classes/GameObject.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GameObject.class.cpp.i
+.PHONY : Classes/GameObject.class.cpp.i
+
+Classes/GameObject.class.s: Classes/GameObject.class.cpp.s
+
+.PHONY : Classes/GameObject.class.s
+
+# target to generate assembly for a file
+Classes/GameObject.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GameObject.class.cpp.s
+.PHONY : Classes/GameObject.class.cpp.s
+
 Classes/Math/Mat2.class.o: Classes/Math/Mat2.class.cpp.o
 
 .PHONY : Classes/Math/Mat2.class.o
@@ -312,6 +339,87 @@ Classes/Render/Camera.class.cpp.s:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.s
 .PHONY : Classes/Render/Camera.class.cpp.s
 
+Classes/Render/Mesh.class.o: Classes/Render/Mesh.class.cpp.o
+
+.PHONY : Classes/Render/Mesh.class.o
+
+# target to build an object file
+Classes/Render/Mesh.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o
+.PHONY : Classes/Render/Mesh.class.cpp.o
+
+Classes/Render/Mesh.class.i: Classes/Render/Mesh.class.cpp.i
+
+.PHONY : Classes/Render/Mesh.class.i
+
+# target to preprocess a source file
+Classes/Render/Mesh.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.i
+.PHONY : Classes/Render/Mesh.class.cpp.i
+
+Classes/Render/Mesh.class.s: Classes/Render/Mesh.class.cpp.s
+
+.PHONY : Classes/Render/Mesh.class.s
+
+# target to generate assembly for a file
+Classes/Render/Mesh.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.s
+.PHONY : Classes/Render/Mesh.class.cpp.s
+
+Classes/Render/ObjParser.class.o: Classes/Render/ObjParser.class.cpp.o
+
+.PHONY : Classes/Render/ObjParser.class.o
+
+# target to build an object file
+Classes/Render/ObjParser.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o
+.PHONY : Classes/Render/ObjParser.class.cpp.o
+
+Classes/Render/ObjParser.class.i: Classes/Render/ObjParser.class.cpp.i
+
+.PHONY : Classes/Render/ObjParser.class.i
+
+# target to preprocess a source file
+Classes/Render/ObjParser.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.i
+.PHONY : Classes/Render/ObjParser.class.cpp.i
+
+Classes/Render/ObjParser.class.s: Classes/Render/ObjParser.class.cpp.s
+
+.PHONY : Classes/Render/ObjParser.class.s
+
+# target to generate assembly for a file
+Classes/Render/ObjParser.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.s
+.PHONY : Classes/Render/ObjParser.class.cpp.s
+
+Classes/Render/RenderManager.class.o: Classes/Render/RenderManager.class.cpp.o
+
+.PHONY : Classes/Render/RenderManager.class.o
+
+# target to build an object file
+Classes/Render/RenderManager.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o
+.PHONY : Classes/Render/RenderManager.class.cpp.o
+
+Classes/Render/RenderManager.class.i: Classes/Render/RenderManager.class.cpp.i
+
+.PHONY : Classes/Render/RenderManager.class.i
+
+# target to preprocess a source file
+Classes/Render/RenderManager.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.i
+.PHONY : Classes/Render/RenderManager.class.cpp.i
+
+Classes/Render/RenderManager.class.s: Classes/Render/RenderManager.class.cpp.s
+
+.PHONY : Classes/Render/RenderManager.class.s
+
+# target to generate assembly for a file
+Classes/Render/RenderManager.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.s
+.PHONY : Classes/Render/RenderManager.class.cpp.s
+
 Classes/Transform.class.o: Classes/Transform.class.cpp.o
 
 .PHONY : Classes/Transform.class.o
@@ -375,6 +483,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... 42run"
+	@echo "... Classes/GameObject.class.o"
+	@echo "... Classes/GameObject.class.i"
+	@echo "... Classes/GameObject.class.s"
 	@echo "... Classes/Math/Mat2.class.o"
 	@echo "... Classes/Math/Mat2.class.i"
 	@echo "... Classes/Math/Mat2.class.s"
@@ -396,6 +507,15 @@ help:
 	@echo "... Classes/Render/Camera.class.o"
 	@echo "... Classes/Render/Camera.class.i"
 	@echo "... Classes/Render/Camera.class.s"
+	@echo "... Classes/Render/Mesh.class.o"
+	@echo "... Classes/Render/Mesh.class.i"
+	@echo "... Classes/Render/Mesh.class.s"
+	@echo "... Classes/Render/ObjParser.class.o"
+	@echo "... Classes/Render/ObjParser.class.i"
+	@echo "... Classes/Render/ObjParser.class.s"
+	@echo "... Classes/Render/RenderManager.class.o"
+	@echo "... Classes/Render/RenderManager.class.i"
+	@echo "... Classes/Render/RenderManager.class.s"
 	@echo "... Classes/Transform.class.o"
 	@echo "... Classes/Transform.class.i"
 	@echo "... Classes/Transform.class.s"

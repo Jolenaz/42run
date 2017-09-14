@@ -7,7 +7,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Math/Mat4.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Render/Camera.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
   "42run.pdb"
   "42run"
 )

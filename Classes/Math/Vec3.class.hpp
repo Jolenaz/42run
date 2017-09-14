@@ -6,12 +6,11 @@
 /*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 17:04:22 by jbelless          #+#    #+#             */
-/*   Updated: 2017/09/12 17:04:26 by jbelless         ###   ########.fr       */
+/*   Updated: 2017/09/14 11:05:14 by jbelless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
 #include "joMath.hpp"
 
 class Vec4;

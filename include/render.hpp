@@ -1,4 +1,6 @@
 
 #pragma once
-#include <cmath>
 #include "Camera.class.hpp"
+#include "Mesh.class.hpp"
+#include "ObjParser.class.hpp"
+#include "RenderManager.class.hpp"

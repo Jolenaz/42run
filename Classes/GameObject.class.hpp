@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Camera.class.hpp                                   :+:      :+:    :+:   */
+/*   GameObject.class.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:11:02 by jbelless          #+#    #+#             */
-/*   Updated: 2017/09/14 11:11:06 by jbelless         ###   ########.fr       */
+/*   Created: 2017/09/14 11:10:16 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/14 11:10:19 by jbelless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "joMath.hpp"
-#include "Transform.class.hpp" 
+#include "Transform.class.hpp"
+#include "RenderManager.class.hpp"
 
-class Camera{
+class GameObject{
+
     public:
 
     // Constructeurs, Destructeur
+    GameObject( void );
+    GameObject(GameObject * parent);
+    GameObject(GameObject const & src);
+    virtual ~GameObject( void );
+    GameObject & operator=(GameObject const & src);
 
-    Camera(void);
-    Camera(float fov, float near, float far, float ratio);
-    Camera(Camera const & src);
-    virtual ~Camera(void);
-    Camera & operator=(Camera const & src);
-
-    float     fov;
-    float     near;
-    float     far;
-    float     ratio;
-
-    Mat4 get_projMat( void );
     Transform transform;
 
-    // attribus
+    std::string meshName;
+
+    GameObject * get_parent( void ) const;
+    void set_parent(GameObject *);
+
+    void addChild(GameObject *);
+    void removeChild(GameObject *);
+
     private:
 
-    Mat4 _projMat;
+    GameObject * _parent;
+    std::vector<GameObject *> _children;
+    
 
-    void _calcProjection();
+    // attribus
 
     // fonctions membres
 

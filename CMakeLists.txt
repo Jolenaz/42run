@@ -25,7 +25,11 @@ set(SOURCE_FILES
 	Classes/Math/Mat3.class.cpp
 	Classes/Math/Mat4.class.cpp
 	Classes/Render/Camera.class.cpp
+	Classes/Render/ObjParser.class.cpp
+	Classes/Render/RenderManager.class.cpp
+	Classes/Render/Mesh.class.cpp
 	Classes/Transform.class.cpp
+	Classes/GameObject.class.cpp
 	)
 
 add_executable(42run ${SOURCE_FILES})

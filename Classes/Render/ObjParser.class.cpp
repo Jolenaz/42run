@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42run.hpp                                          :+:      :+:    :+:   */
+/*   ObjParser.class.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/12 10:10:11 by jbelless          #+#    #+#             */
-/*   Updated: 2017/09/12 10:10:13 by jbelless         ###   ########.fr       */
+/*   Created: 2017/09/14 15:55:28 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/14 15:55:31 by jbelless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "ObjParser.class.hpp"
 
-#include <iostream>
-#include <vector>
-#include <string>
+ObjParser::ObjParser( void ){}
+ObjParser::~ObjParser( void ){}
+ObjParser::ObjParser( ObjParser const & src){}
+ObjParser & ObjParser::operator=( ObjParser const & ){return *this;}
 
-#include "joMath.hpp"
-#include "render.hpp"
-#include "Transform.class.hpp"
-#include "GameObject.class.hpp"
-#include "struct.hpp"
+Mesh ObjParser::parseObj(std::string objName){
+    Mesh ret;
+
+    return ret;
+}

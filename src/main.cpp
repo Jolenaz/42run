@@ -14,13 +14,9 @@
 
 int main()
 {
-    Mat2 mat(1,2,3,4);
-    Mat2 mat2(5,6,7,8);
 
-    Vec2 Vec(2,0);
+    GameObject go1;
+    RenderManager rManager(1024, 768);
 
-    Vec[1] = 7;
-
-    std::cout << mat2 * Vec << std::endl;
     return (0);
 }

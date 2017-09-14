@@ -1,40 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Camera.class.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbelless <jbelless@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/14 11:19:31 by jbelless          #+#    #+#             */
+/*   Updated: 2017/09/14 11:19:33 by jbelless         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Camera.class.hpp"
 
 Camera::Camera(){
-    this->_fov = 50;
-    this->_near = 1;
-    this->_far = 100;
-    this->_ratio = 4.0f / 3.0f;
+    this->fov = 50;
+    this->near = 1;
+    this->far = 100;
+    this->ratio = 4.0f / 3.0f;
 }
 
-Camera::Camera(float fov, float near, float far, float ratio): _fov(fov), _near(near), _far(far), _ratio(ratio){}
+Camera::Camera(float fov, float near, float far, float ratio): fov(fov), near(near), far(far), ratio(ratio){
+}
 
 Camera::~Camera(){}
 
-Camera::Camera(Camera const & src)
-{
-    this->_fov =   src.get_fov();
-    this->_near =  src.get_near();
-    this->_far =   src.get_far();
-    this->_ratio = src.get_ratio();
+Camera::Camera(Camera const & src){
+    this->fov =   src.fov;
+    this->near =  src.near;
+    this->far =   src.far;
+    this->ratio = src.ratio;
 }
 
-void Camera::calcProjection()
-{
-
-    float tanFov = tanf(this->_fov / 2.0f * M_PI / 180.0f);
-
-    this->projMat.set_identity();
-    this->projMat.value.m00 = 1.0f / (this->_ratio * tanFov);
-    // this->projMat.value.m00 = ;
-    // this->projMat.value.m00 = ;
-    // this->projMat.value.m00 = ;
-    // this->projMat.value.m00 = ;
-    // this->projMat.value.m00 = ;
-    // this->projMat.value.m00 = ;
+Camera & Camera::operator=(Camera const & src){
+    this->fov =   src.fov;
+    this->near =  src.near;
+    this->far =   src.far;
+    this->ratio = src.ratio;
+    return *this;
 }
 
-float     Camera::get_fov() const{ return (this->_fov); }
-float     Camera::get_near() const{ return (this->_near); }
-float     Camera::get_far() const{ return (this->_far); }
-float     Camera::get_ratio() const{ return (this->_ratio); }
+void Camera::_calcProjection()
+{
+    float tanFov = tanf(this->fov / 2.0f * M_PI / 180.0f);
+
+    this->_projMat.set_identity();
+    this->_projMat.value.m00 = 1.0f / (this->ratio * tanFov);
+    this->_projMat.value.m11 = 1.0f / tanFov;
+    this->_projMat.value.m22 = (this->near + this->far) / (this->near - this->far);
+    this->_projMat.value.m23 = -1.0f;
+    this->_projMat.value.m32 = 2.0f * this->near * this->far / (this->near - this->far);
+    this->_projMat.value.m33 = 0.0f;
+}
+
+Mat4 Camera::get_projMat( void ){
+    this->_calcProjection();
+    return this->_projMat;
+}
+
