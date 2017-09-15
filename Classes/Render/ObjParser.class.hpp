@@ -11,7 +11,10 @@
 /* ************************************************************************** */
 
 #pragma once
-#include "render.hpp"
+#include <regex>
+#include <fstream>
+#include "joMath.hpp"
+#include "Mesh.class.hpp"
 
 class ObjParser{
 
@@ -23,8 +26,15 @@ class ObjParser{
     ObjParser( ObjParser const & );
     ObjParser & operator=( ObjParser const & );
 
+    std::vector<Vec3> vertexVect;
+    std::vector<Vec3> normalVect;
+    std::vector<Vec2> texturVect;
+
+    void parse_v_line(std::string);
+    void parse_f_line(std::string, Mesh &);
+
     public:
 
-    static Mesh parseObj(std::string objName);
+    Mesh parseObj(std::string objName);
 
 };

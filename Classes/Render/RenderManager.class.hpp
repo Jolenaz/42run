@@ -14,8 +14,9 @@
 #include <vector> 
 #include <string>
 #include <fstream>
-#include "render.hpp"
 #include "GameObject.class.hpp"
+#include "ObjParser.class.hpp"
+#include "Camera.class.hpp"
 #include <SDL.h>
 #include <OpenGL/gl3.h> 
 
@@ -48,6 +49,7 @@ class RenderManager{
     // attribus membres
 
     Camera cam;
+    ObjParser parser;
 
     void draw( void );
 
@@ -56,7 +58,10 @@ class RenderManager{
     // attribus nom membres
 
     static std::vector<GameObject*> gameObjects;
-    std::vector<Mesh> meshes; 
+    std::vector<Mesh> meshes;
+
+
+
 
     //SDL & OpenGL
 

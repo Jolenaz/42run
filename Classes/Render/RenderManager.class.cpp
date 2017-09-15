@@ -17,7 +17,7 @@ RenderManager::RenderManager(int w, int h){
     cam.ratio = (float)w / (float)h;
     for(std::string meshName : meshNames)
     {
-        meshes.push_back( ObjParser::parseObj( meshName ) );
+        meshes.push_back( this->parser.parseObj( meshName ) );
     }
 }
 

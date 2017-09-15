@@ -641,8 +641,14 @@ ObjParser.class.hpp
 /Users/jbelless/42run/Classes/Render/ObjParser.class.hpp
 
 /Users/jbelless/42run/Classes/Render/ObjParser.class.hpp
-render.hpp
-/Users/jbelless/42run/Classes/Render/render.hpp
+regex
+-
+fstream
+-
+joMath.hpp
+/Users/jbelless/42run/Classes/Render/joMath.hpp
+Mesh.class.hpp
+/Users/jbelless/42run/Classes/Render/Mesh.class.hpp
 
 /Users/jbelless/42run/Classes/Render/RenderManager.class.cpp
 RenderManager.class.hpp
@@ -655,10 +661,12 @@ string
 -
 fstream
 -
-render.hpp
-/Users/jbelless/42run/Classes/Render/render.hpp
 GameObject.class.hpp
 /Users/jbelless/42run/Classes/Render/GameObject.class.hpp
+ObjParser.class.hpp
+/Users/jbelless/42run/Classes/Render/ObjParser.class.hpp
+Camera.class.hpp
+/Users/jbelless/42run/Classes/Render/Camera.class.hpp
 SDL.h
 -
 OpenGL/gl3.h
@@ -719,8 +727,14 @@ vector
 -
 
 Classes/Render/ObjParser.class.hpp
-render.hpp
-Classes/Render/render.hpp
+regex
+-
+fstream
+-
+joMath.hpp
+Classes/Render/joMath.hpp
+Mesh.class.hpp
+Classes/Render/Mesh.class.hpp
 
 Classes/Render/RenderManager.class.hpp
 vector
@@ -729,10 +743,12 @@ string
 -
 fstream
 -
-render.hpp
-Classes/Render/render.hpp
 GameObject.class.hpp
 Classes/Render/GameObject.class.hpp
+ObjParser.class.hpp
+Classes/Render/ObjParser.class.hpp
+Camera.class.hpp
+Classes/Render/Camera.class.hpp
 SDL.h
 -
 OpenGL/gl3.h
