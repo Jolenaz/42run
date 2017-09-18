@@ -420,6 +420,33 @@ Classes/Render/RenderManager.class.cpp.s:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.s
 .PHONY : Classes/Render/RenderManager.class.cpp.s
 
+Classes/Render/Vertex.class.o: Classes/Render/Vertex.class.cpp.o
+
+.PHONY : Classes/Render/Vertex.class.o
+
+# target to build an object file
+Classes/Render/Vertex.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o
+.PHONY : Classes/Render/Vertex.class.cpp.o
+
+Classes/Render/Vertex.class.i: Classes/Render/Vertex.class.cpp.i
+
+.PHONY : Classes/Render/Vertex.class.i
+
+# target to preprocess a source file
+Classes/Render/Vertex.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.i
+.PHONY : Classes/Render/Vertex.class.cpp.i
+
+Classes/Render/Vertex.class.s: Classes/Render/Vertex.class.cpp.s
+
+.PHONY : Classes/Render/Vertex.class.s
+
+# target to generate assembly for a file
+Classes/Render/Vertex.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.s
+.PHONY : Classes/Render/Vertex.class.cpp.s
+
 Classes/Transform.class.o: Classes/Transform.class.cpp.o
 
 .PHONY : Classes/Transform.class.o
@@ -516,6 +543,9 @@ help:
 	@echo "... Classes/Render/RenderManager.class.o"
 	@echo "... Classes/Render/RenderManager.class.i"
 	@echo "... Classes/Render/RenderManager.class.s"
+	@echo "... Classes/Render/Vertex.class.o"
+	@echo "... Classes/Render/Vertex.class.i"
+	@echo "... Classes/Render/Vertex.class.s"
 	@echo "... Classes/Transform.class.o"
 	@echo "... Classes/Transform.class.i"
 	@echo "... Classes/Transform.class.s"

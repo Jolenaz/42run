@@ -2,13 +2,12 @@
 
 layout(location = 0) in vec3 vertex_pos;
 layout(location = 1) in vec3 vertex_normal;
+layout(location = 2) in vec2 vertex_textur;
 
-uniform mat4 MVP;
-uniform mat4[64] bones;
-uniform vec4[64] colors;
+uniform mat4 VP;
 
 out vec4 color;
 void main () {
-	color = colors[gl_InstanceID];
-	gl_Position = MVP * bones[ gl_InstanceID ] * vec4(vertex_pos, 1.0);
+	color = vec4(1,1,1,1);
+	gl_Position = VP * vec4(vertex_pos, 1.0);
 }

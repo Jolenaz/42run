@@ -84,4 +84,6 @@ class RenderManager{
     static void addObject(GameObject *);
     static void removeObject(GameObject *);
 
+    int debug;
+
 };

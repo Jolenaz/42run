@@ -13,16 +13,7 @@
 #include "Mat4.class.hpp"
 
 Mat4::Mat4(){
-    for(int i = 0; i < 4; ++i)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (i == j)
-                this->value.mc[i][j] = 1.0f;
-            else
-                this->value.mc[i][j] = 0.0f;
-        }
-    }
+    this->set_zero();
 }
 
 Mat4::~Mat4(){}
@@ -119,7 +110,7 @@ void    Mat4::operator*=(Mat4 const & rhs)
         {
             for (int k = 0; k < 4; k++)
             {
-                ret.value.mc[i][j] += this->value.mc[i][k] *  rhs.value.mc[k][j];
+                ret.value.mc[i][j] += this->value.mc[i][k] * rhs.value.mc[k][j];
             }
         }
     }
@@ -232,7 +223,7 @@ Mat4 & Mat4::transpos()
 
     for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; i < 4; j++)
+        for (int j = 0; j < 4; j++)
         {
             this->value.mc[i][j] = tmp.value.mc[j][i];
         }
@@ -248,48 +239,51 @@ Mat4    & Mat4::rotateAround(Vec4 const & rotation)
 Mat4    & Mat4::rotateAround(Vec3 const & axe, float const & angle)
 {
     Mat4 ret;
+    ret.set_identity();
     Vec3 NAxe(axe);
     NAxe.normalize();
 
-    float c = cos(angle);
-    float s = sin(angle);
+    float c = cos(angle * M_PI / 180.0f);
+    float s = sin(angle * M_PI / 180.0f);
 
     ret.value.m00 = NAxe.x * NAxe.x + (1 - NAxe.x * NAxe.x) * c;
     ret.value.m01 = NAxe.x * NAxe.y * (1 - c) - NAxe.z * s;
     ret.value.m02 = NAxe.x * NAxe.z * (1 - c) + NAxe.y * s;
-    ret.value.m10 = NAxe.x * NAxe.y * (1 - c) - NAxe.z * s;
+    ret.value.m10 = NAxe.x * NAxe.y * (1 - c) + NAxe.z * s;
     ret.value.m11 = NAxe.y * NAxe.y + (1 - NAxe.y * NAxe.y) * c;
     ret.value.m12 = NAxe.y * NAxe.z * (1 - c) - NAxe.x * s;
-    ret.value.m20 = NAxe.x * NAxe.z * (1 - c) + NAxe.y * s;
-    ret.value.m21 = NAxe.y * NAxe.z * (1 - c) - NAxe.x * s;
+    ret.value.m20 = NAxe.x * NAxe.z * (1 - c) - NAxe.y * s;
+    ret.value.m21 = NAxe.y * NAxe.z * (1 - c) + NAxe.x * s;
     ret.value.m22 = NAxe.z * NAxe.z + (1 - NAxe.z * NAxe.z) * c;
-    ret.value.m33 = 1.0f;
 
-    *this *= ret;
+    *this = ret * *this;
+
     return (*this); 
 }
 
 Mat4    & Mat4::rotateLocal(Vec3 const & angles)
 {
     Mat4 ret;
+    ret.set_identity();
 
     ret.rotateAround(Vec4(1,0,0,0), angles.x );
     ret.rotateAround(ret * Vec4(0,1,0,0), angles.y );
     ret.rotateAround(ret * Vec4(0,0,1,0), angles.z);
 
-    *this *= ret;
+    *this = ret * *this;
     return *this;
 }
 
 Mat4    & Mat4::rotateGlobal(Vec3 const & angles)
 {
     Mat4 ret;
+    ret.set_identity();
 
-    ret.rotateAround(Vec4(1,0,0,0), angles.x );
-    ret.rotateAround(Vec4(0,1,0,0), angles.y );
+    ret.rotateAround(Vec4(1,0,0,0), angles.x);
+    ret.rotateAround(Vec4(0,1,0,0), angles.y);
     ret.rotateAround(Vec4(0,0,1,0), angles.z);
 
-    *this *= ret;
+    *this = ret * *this;
     return *this;
 }
 

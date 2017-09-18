@@ -12,7 +12,10 @@
 
 #pragma once
 #include "struct.hpp"
+#include "Vertex.class.hpp"
 #include <vector>
+#include <SDL.h>
+#include <OpenGL/gl3.h> 
 
 class Mesh{
 
@@ -22,9 +25,16 @@ class Mesh{
     Mesh(Mesh const &);
     Mesh & operator=(Mesh const &);
 
+    bool ready;
+
     std::string name;
 
     std::vector<Vertex> vertices;
 
-    int vao;
+    void    create_vao(void);
+
+    GLuint vao;
+
 };
+
+std::ostream & operator<<(std::ostream & o, Mesh const & i);

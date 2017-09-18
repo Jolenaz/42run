@@ -321,9 +321,33 @@ CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o.provides: CMakeFiles/42run.
 CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o
 
 
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o: CMakeFiles/42run.dir/flags.make
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o: Classes/Render/Vertex.class.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o -c /Users/jbelless/42run/Classes/Render/Vertex.class.cpp
+
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jbelless/42run/Classes/Render/Vertex.class.cpp > CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.i
+
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jbelless/42run/Classes/Render/Vertex.class.cpp -o CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.s
+
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.requires:
+
+.PHONY : CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.requires
+
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.provides: CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.requires
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.provides.build
+.PHONY : CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.provides
+
+CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.provides.build: CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o
+
+
 CMakeFiles/42run.dir/Classes/Transform.class.cpp.o: CMakeFiles/42run.dir/flags.make
 CMakeFiles/42run.dir/Classes/Transform.class.cpp.o: Classes/Transform.class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/Transform.class.cpp.o -c /Users/jbelless/42run/Classes/Transform.class.cpp
 
 CMakeFiles/42run.dir/Classes/Transform.class.cpp.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.provides.build: CMakeFiles/42
 
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: CMakeFiles/42run.dir/flags.make
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: Classes/GameObject.class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o -c /Users/jbelless/42run/Classes/GameObject.class.cpp
 
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.i: cmake_force
@@ -382,6 +406,7 @@ CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o.provides.build: CMakeFiles/4
 "CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o" \
 "CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o" \
 "CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o" \
+"CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o" \
 "CMakeFiles/42run.dir/Classes/Transform.class.cpp.o" \
 "CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
 
@@ -399,11 +424,12 @@ CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o.provides.build: CMakeFiles/4
 42run: CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o
+42run: CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o
 42run: CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o
 42run: CMakeFiles/42run.dir/build.make
 42run: CMakeFiles/42run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable 42run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jbelless/42run/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable 42run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/42run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -422,6 +448,7 @@ CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/Camera.class.
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o.requires
+CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/Transform.class.cpp.o.requires
 CMakeFiles/42run.dir/requires: CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o.requires
 

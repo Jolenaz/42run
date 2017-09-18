@@ -19,8 +19,11 @@ ObjParser & ObjParser::operator=( ObjParser const & ){return *this;}
 
 Mesh ObjParser::parseObj(std::string objName){
     this->vertexVect.clear();
+    this->vertexVect.push_back(Vec3());
     this->normalVect.clear();
+    this->normalVect.push_back(Vec3());
     this->texturVect.clear();
+    this->texturVect.push_back(Vec2());
     Mesh ret;
     ret.name = objName;
     std::fstream objFile("./Objects/" + objName + ".obj");
@@ -34,7 +37,15 @@ Mesh ObjParser::parseObj(std::string objName){
             if (line[0] == 'v')
                 this->parse_v_line(line);
             if (line[0] == 'f')
+            {
+                try{
                 this->parse_f_line(line, ret);
+                } catch (std::exception &e){
+                    std::cerr << e.what() << std::endl;
+                    exit(EXIT_FAILURE);
+                }
+
+            }
         }
     }
     else
@@ -81,16 +92,47 @@ void ObjParser::parse_v_line(std::string line){
 }
 
 void ObjParser::parse_f_line(std::string line, Mesh & ret){
-    std::regex re ("\\d+\\/\\d*\\/\\d*");
+    std::regex re ("(\\d+)\\/(\\d*)\\/(\\d*)");
     std::sregex_iterator next(line.begin(), line.end(), re);
     std::sregex_iterator end;
+    Vertex vert0;
+    Vertex verti_1;
     int i = 0;
     while (next != end) {
         i++;
         std::smatch match = *next;
-        std::cout << match.str() + " ";
         next++;
+        int i1 = atof(match[1].str().c_str());
+        int i2 = atof(match[2].str().c_str());
+        int i3 = atof(match[3].str().c_str());
+        i2 = i2 == -1 ? 0 : i2;
+        i3 = i3 == -1 ? 0 : i3;
+        if (i1 < 0 || i1 >= this->vertexVect.size() ||
+            i2 < 0 || i2 >= this->texturVect.size() ||
+            i3 < 0 || i3 >= this->normalVect.size())
+        {
+            throw std::exception();   
+        }
+        if (i == 1){
+            vert0 = Vertex(
+                this->vertexVect[i1],
+                this->normalVect[i3],
+                this->texturVect[i2]);
+        }
+        else if (i == 2){
+            verti_1 = Vertex(
+                this->vertexVect[i1],
+                this->normalVect[i3],
+                this->texturVect[i2]);
+        }
+        else{
+            ret.vertices.push_back(vert0);
+            ret.vertices.push_back(verti_1);
+            verti_1 = Vertex(
+                this->vertexVect[i1],
+                this->normalVect[i3],
+                this->texturVect[i2]);
+            ret.vertices.push_back(verti_1);
+        }
     }
-    std::cout << i << " matches "<< std::endl;
-
 }

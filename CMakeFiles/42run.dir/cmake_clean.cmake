@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
   "42run.pdb"

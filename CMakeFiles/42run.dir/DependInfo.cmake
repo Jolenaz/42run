@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jbelless/42run/Classes/Render/Mesh.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Render/Mesh.class.cpp.o"
   "/Users/jbelless/42run/Classes/Render/ObjParser.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Render/ObjParser.class.cpp.o"
   "/Users/jbelless/42run/Classes/Render/RenderManager.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o"
+  "/Users/jbelless/42run/Classes/Render/Vertex.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o"
   "/Users/jbelless/42run/Classes/Transform.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
   "/Users/jbelless/42run/src/main.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/src/main.cpp.o"
   )
@@ -29,6 +30,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "Classes/Math"
   "Classes/Render"
   "include"
+  "glm"
   )
 
 # Targets to which this target links.

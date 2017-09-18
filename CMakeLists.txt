@@ -13,6 +13,7 @@ include_directories(Classes)
 include_directories(Classes/Math)
 include_directories(Classes/Render)
 include_directories(include)
+include_directories(glm)
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -28,6 +29,7 @@ set(SOURCE_FILES
 	Classes/Render/ObjParser.class.cpp
 	Classes/Render/RenderManager.class.cpp
 	Classes/Render/Mesh.class.cpp
+	Classes/Render/Vertex.class.cpp
 	Classes/Transform.class.cpp
 	Classes/GameObject.class.cpp
 	)

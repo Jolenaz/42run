@@ -15,6 +15,7 @@
 #include <fstream>
 #include "joMath.hpp"
 #include "Mesh.class.hpp"
+#include "Vertex.class.hpp"
 
 class ObjParser{
 
