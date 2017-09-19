@@ -6,6 +6,11 @@ Vertex::Vertex(Vec3 pos, Vec3 norm, Vec2 text){
     this->normal = norm;
     this->uv = text;
 }
+Vertex::Vertex(Vec3 pos, Vec2 text, Vec3 norm){
+    this->pos = pos;
+    this->normal = norm;
+    this->uv = text;
+}
 Vertex::~Vertex(void){}
 Vertex::Vertex(Vertex const & src){
     this->pos = src.pos;

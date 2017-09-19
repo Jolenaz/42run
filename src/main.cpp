@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "42run.hpp"
-#include "glm/glm.hpp"
-#include "glm/ext.hpp"
+// #include "glm/glm.hpp"
+// #include "glm/ext.hpp"
 
 int main_loop(RenderManager & rManager)
 {
@@ -60,20 +60,20 @@ int main_loop(RenderManager & rManager)
     return (1);
 }
 
-void print_glm_mat4(glm::mat4x4 mat)
-{
-    std::cout << "glm :" << std::endl;
-      for (int i = 0; i <4; i++)
-    {
-        std::cout << "| ";
-        for (int j = 0; j < 4 ; j++)
-        {
-            std::cout << mat[i][j] << " ";
-        }
-        std::cout << "|" << std::endl;
-    }  
-    std::cout << std::endl;
-}
+// void print_glm_mat4(glm::mat4x4 mat)
+// {
+//     std::cout << "glm :" << std::endl;
+//       for (int i = 0; i <4; i++)
+//     {
+//         std::cout << "| ";
+//         for (int j = 0; j < 4 ; j++)
+//         {
+//             std::cout << mat[i][j] << " ";
+//         }
+//         std::cout << "|" << std::endl;
+//     }  
+//     std::cout << std::endl;
+// }
 
 int main()
 {

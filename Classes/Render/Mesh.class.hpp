@@ -21,7 +21,7 @@ class Mesh{
 
     public:
     Mesh(void);
-    virtual ~Mesh(void);
+    ~Mesh(void);
     Mesh(Mesh const &);
     Mesh & operator=(Mesh const &);
 

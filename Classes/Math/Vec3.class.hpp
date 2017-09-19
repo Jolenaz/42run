@@ -18,27 +18,27 @@ class Vec2;
 
 class Vec3{
 
-public:
+    public:
 
-// Constructeurs, Destructeur
+    // Constructeurs, Destructeur
 
     Vec3(void);
     Vec3(Vec3 const & src);
     Vec3(Vec4 const & src);
     Vec3(float x, float y, float z);
     Vec3(Vec2 const & src, float z);
-    virtual ~Vec3(void);
+    ~Vec3(void);
     Vec3 & operator=(Vec3 const & src);
     Vec3 & operator=(Vec4 const & src);
 
 
-// attribus
+    // attribus
 
     float x;
     float y;
     float z;
 
-// fonctions membres
+    // fonctions membres
 
     Vec3 operator+(Vec3 const & src) const;
     void operator+=(Vec3 const & src);
@@ -58,7 +58,7 @@ public:
 
 
 
-// fonctions non membres
+    // fonctions non membres
 
     static Vec3 cross(Vec3 const & vec1, Vec3 const & vec2);
     static float dot(Vec3 const & vec1, Vec3 const & vec2);
