@@ -55,6 +55,4 @@ void    Mesh::create_vao(void){
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 	glEnableVertexAttribArray(2);
-
-    std::cout << this->vertices.size() << std::endl;
 }

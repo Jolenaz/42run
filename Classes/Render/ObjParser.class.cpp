@@ -32,6 +32,7 @@ Mesh ObjParser::parseObj(std::string objName){
     {
         while(getline(objFile, line))
         {
+
             if (line[0] == '#')
                 continue;
             if (line[0] == 'v')
@@ -92,7 +93,7 @@ void ObjParser::parse_v_line(std::string line){
 }
 
 void ObjParser::parse_f_line(std::string line, Mesh & ret){
-    std::regex re ("(\\d+)\\/(\\d*)\\/(\\d*)");
+    std::regex re ("(\\d+)\\/?(\\d*)\\/?(\\d*)");
     std::sregex_iterator next(line.begin(), line.end(), re);
     std::sregex_iterator end;
     Vertex vert0;
@@ -134,5 +135,6 @@ void ObjParser::parse_f_line(std::string line, Mesh & ret){
                 this->texturVect[i2]);
             ret.vertices.push_back(verti_1);
         }
+        
     }
 }

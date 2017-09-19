@@ -122,21 +122,31 @@ void RenderManager::draw(void){
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glUseProgram(this->glProgramId);
-    Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_worldToLocal();
+    Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_localToWorld();
     glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "VP"), 1, GL_TRUE, (const GLfloat*)&VP.value);
 
-    for (int i = 0; i < this->meshes.size(); ++i)
-    {
+    for (int i = 0; i < this->meshes.size(); i++){
+        // if (this->debug && i == 1){
+        //     std::cout <<  this->meshes[i] << std::endl;
+        //     this->debug = 0;
+
+        // }
         if (this->meshes[i].ready == false)
             continue;
 
-        glBindVertexArray(this->meshes[i].vao);
-        glDrawArrays(GL_TRIANGLES, 0, this->meshes[i].vertices.size());
+        std::vector<Mat4> models;
 
-        // if (this->debug){
-        //     this->debug = 0;
-        //     std::cout << this->meshes[i].vao << std::endl<< std::endl;
-        // }
+        for (int j = 0; j < this->gameObjects.size(); j++){
+            if (this->gameObjects[j]->meshName == this->meshes[i].name){
+                models.push_back(this->gameObjects[j]->transform.get_worldToLocal());
+            }
+        }
+
+        glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "models"), models.size(), GL_TRUE, (const GLfloat*)models.data());
+
+        glBindVertexArray(this->meshes[i].vao);
+        glDrawArraysInstanced(GL_TRIANGLES, 0, this->meshes[i].vertices.size(), models.size());
+
     }
 
     SDL_GL_SwapWindow(this->window);

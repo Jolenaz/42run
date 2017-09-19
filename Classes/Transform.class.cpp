@@ -56,16 +56,29 @@ void Transform::scalate(Vec3 const & scale){
 }
 
 Mat4 Transform::get_worldToLocal( void ){
-    this->_updateMatrix();
+    this->_updateMatrixW();
     return this->_worldToLocal;
 }
 
-void Transform::_updateMatrix(){
-    Mat4 ret;
-   // ret.set_identity().translate(this->position);
-    ret.set_identity().translate(this->position).rotateGlobal(this->rotation);
+Mat4 Transform::get_localToWorld( void ){
+    this->_updateMatrixL();
+    return this->_localToWorld;
+}
 
-    // if (this->parent != NULL)
-    //     ret = ret * this->parent->get_worldToLocal();
+void Transform::_updateMatrixL(){
+    Mat4 ret;
+    ret.set_identity().translateInverse(this->position).rotateLocalInverse(this->rotation).scaleInverse(this->scale);
+
+    if (this->parent != NULL)
+        ret = ret * this->parent->get_localToWorld();
+    this->_localToWorld = ret;
+}
+
+void Transform::_updateMatrixW(){
+    Mat4 ret;
+    ret.set_identity().scale(this->scale).rotateLocal(this->rotation).translate(this->position);
+
+    if (this->parent != NULL)
+        ret = this->parent->get_worldToLocal() * ret;
     this->_worldToLocal = ret;
 }

@@ -33,6 +33,7 @@ class Transform{
     Transform * parent;
 
     Mat4 get_worldToLocal( void );
+    Mat4 get_localToWorld( void );
 
     // fonctions membres
 
@@ -43,7 +44,9 @@ class Transform{
     private:
 
     Mat4    _worldToLocal;
-    void    _updateMatrix();
+    Mat4    _localToWorld;
+    void    _updateMatrixL();
+    void    _updateMatrixW();
 
 
     // fonctions non membres
