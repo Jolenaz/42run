@@ -17,6 +17,41 @@ ObjParser::~ObjParser( void ){}
 ObjParser::ObjParser( ObjParser const & src){}
 ObjParser & ObjParser::operator=( ObjParser const & ){return *this;}
 
+int ObjParser::parseTexture(std::string objName){
+    // std::fstream textureFile("./Objects/" + objName + ".bmp");
+    // if (!textureFile)
+    //     return (-1);
+    
+	FILE *file = fopen(("./Objects/" + objName + ".bmp").c_str(), "rb");
+	if (file == NULL)
+		return (-1);
+
+    unsigned int    data_pos;
+    unsigned int    width, height;
+    unsigned int    image_size;
+    unsigned int    image_id;
+    unsigned char	header[138];
+    char            *data;
+
+    fread(header, 1, 138, file);
+	data_pos = *(int*)&(header[0x0A]);
+	width = *(int*)&(header[0x12]);
+	height = *(int*)&(header[0x16]);
+	image_size = width * height * 3;
+    rewind(file);
+    fread(header, 1, data_pos, file);
+	data = (char*)malloc(image_size * sizeof(char));
+	fread(data, 1, image_size, file);
+	fclose(file);
+	glGenTextures(1, &(image_id));
+	glBindTexture(GL_TEXTURE_2D, image_id);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height,0, GL_BGR, GL_UNSIGNED_BYTE, data);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    free(data);
+    return (image_id);
+}
+
 Mesh ObjParser::parseObj(std::string objName){
     this->vertexVect.clear();
     this->vertexVect.push_back(Vec3());

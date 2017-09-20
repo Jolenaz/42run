@@ -28,6 +28,7 @@ class Mesh{
     bool ready;
 
     std::string name;
+    int textureID;
 
     std::vector<Vertex> vertices;
 

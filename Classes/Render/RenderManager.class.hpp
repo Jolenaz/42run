@@ -31,7 +31,7 @@ class RenderManager{
 
     std::vector<std::string> meshNames = 
     {
-        "cube", "test"
+        "screen", "test"
     };
 
     std::vector<t_shader_info> shaders = {

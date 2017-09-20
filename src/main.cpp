@@ -69,7 +69,7 @@ int main()
     rooms[1].meshName = "test";
     rooms[1].transform.position = Vec3(-5,-4,-10);
     rooms[2].meshName = "test";
-    rooms[3].meshName = "test";
+    rooms[3].meshName = "screen";
     rooms[3].transform.position = Vec3(-6,0,0);
     rooms[3].transform.parent = &rooms[0].transform;
     RenderManager rManager(1024, 768);
@@ -79,9 +79,6 @@ int main()
         rooms[0].transform.rotation += Vec3(0,1,0);
         rooms[3].transform.rotation += Vec3(1,0,0);
     }
-
-    
-
 
     return (0);
 }

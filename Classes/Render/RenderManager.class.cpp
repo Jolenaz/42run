@@ -24,6 +24,7 @@ RenderManager::RenderManager(int w, int h){
     {
         if (this->meshes[i].vertices.size() > 0)
         {
+            this->meshes[i].textureID = this->parser.parseTexture(this->meshes[i].name);
             this->meshes[i].ready = true;
             this->meshes[i].create_vao();
         }
@@ -140,6 +141,11 @@ void RenderManager::draw(void){
             if (this->gameObjects[j]->meshName == this->meshes[i].name){
                 models.push_back(this->gameObjects[j]->transform.get_worldToLocal());
             }
+        }
+
+        if (this->meshes[i].textureID != -1)
+        {
+	        glBindTexture(GL_TEXTURE_2D, this->meshes[i].textureID);
         }
 
         glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "models"), models.size(), GL_TRUE, (const GLfloat*)models.data());

@@ -14,11 +14,13 @@
 
 Mesh::Mesh(void){
     this->ready = false;
+    this->textureID = -1;
     this->name = "default";
     this->vertices.clear();
 }
 Mesh::~Mesh(void){}
 Mesh::Mesh(Mesh const & src){
+    this->textureID = src.textureID;
     this->ready = src.ready;
     this->name = src.name;
     this->vertices = src.vertices;

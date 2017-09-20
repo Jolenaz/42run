@@ -38,4 +38,6 @@ class ObjParser{
 
     Mesh parseObj(std::string objName);
 
+    int parseTexture(std::string objName);
+
 };
