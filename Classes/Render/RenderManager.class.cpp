@@ -144,9 +144,7 @@ void RenderManager::draw(void){
         }
 
         if (this->meshes[i].textureID != -1)
-        {
 	        glBindTexture(GL_TEXTURE_2D, this->meshes[i].textureID);
-        }
 
         glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "models"), models.size(), GL_TRUE, (const GLfloat*)models.data());
 
@@ -156,4 +154,22 @@ void RenderManager::draw(void){
     }
 
     SDL_GL_SwapWindow(this->window);
+}
+
+void RenderManager::showFPS(float FPS, bool print ){
+    static int i =0;
+    static float mo = 0;
+
+    if (!print)
+    {
+        mo += FPS;
+        i++;
+        return;
+    }
+
+    char str[100];
+    sprintf(str, "%.1f", mo/i);
+    SDL_SetWindowTitle(this->window, str);
+    mo = 0;
+    i =0;
 }

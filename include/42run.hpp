@@ -18,6 +18,7 @@
 
 #include "joMath.hpp"
 #include "render.hpp"
+#include "gamePlay.hpp"
 #include "Transform.class.hpp"
 #include "GameObject.class.hpp"
 #include "struct.hpp"

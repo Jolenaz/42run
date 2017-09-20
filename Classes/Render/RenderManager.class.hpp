@@ -31,7 +31,7 @@ class RenderManager{
 
     std::vector<std::string> meshNames = 
     {
-        "screen", "test"
+        "screen", "room_cluster"
     };
 
     std::vector<t_shader_info> shaders = {
@@ -52,6 +52,7 @@ class RenderManager{
     ObjParser parser;
 
     void draw( void );
+    void showFPS(float FPS , bool print);
 
     private:
 

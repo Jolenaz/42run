@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/Transform.class.cpp.o"
   "CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
+  "CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o"
   "42run.pdb"
   "42run"
 )

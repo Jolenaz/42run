@@ -61,6 +61,8 @@ CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o
  Classes/Render/Vertex.class.hpp
  include/joMath.hpp
  include/struct.hpp
+CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o
+ /Users/jbelless/42run/Classes/GamePlay/SceneManager.class.cpp
 CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o
  /Users/jbelless/42run/Classes/Math/Mat2.class.cpp
  /Users/jbelless/42run/Classes/Math/Mat2.class.hpp
@@ -363,6 +365,7 @@ CMakeFiles/42run.dir/src/main.cpp.o
  /Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2/close_code.h
  /Users/jbelless/42run/src/main.cpp
  Classes/GameObject.class.hpp
+ Classes/GamePlay/SceneManager.class.hpp
  Classes/Math/Mat2.class.hpp
  Classes/Math/Mat3.class.hpp
  Classes/Math/Mat4.class.hpp
@@ -376,6 +379,7 @@ CMakeFiles/42run.dir/src/main.cpp.o
  Classes/Render/Vertex.class.hpp
  Classes/Transform.class.hpp
  include/42run.hpp
+ include/gamePlay.hpp
  include/joMath.hpp
  include/render.hpp
  include/struct.hpp

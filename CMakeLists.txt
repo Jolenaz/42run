@@ -12,6 +12,7 @@ include_directories(${OPENGL_INCLUDE_DIR})
 include_directories(Classes)
 include_directories(Classes/Math)
 include_directories(Classes/Render)
+include_directories(Classes/GamePlay)
 include_directories(include)
 include_directories(glm)
 
@@ -32,6 +33,7 @@ set(SOURCE_FILES
 	Classes/Render/Vertex.class.cpp
 	Classes/Transform.class.cpp
 	Classes/GameObject.class.cpp
+	Classes/GamePlay/SceneManager.class.cpp
 	)
 
 add_executable(42run ${SOURCE_FILES})
