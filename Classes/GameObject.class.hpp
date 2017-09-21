@@ -35,7 +35,7 @@ class GameObject{
     void addChild(GameObject *);
     void removeChild(GameObject *);
 
-    private:
+    protected:
 
     GameObject * _parent;
     std::vector<GameObject *> _children;

@@ -52,7 +52,7 @@ class RenderManager{
     ObjParser parser;
 
     void draw( void );
-    void showFPS(float FPS , bool print);
+    void showFPS(float FPS , int frameIndex);
 
     private:
 

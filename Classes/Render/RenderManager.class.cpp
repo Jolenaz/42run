@@ -30,6 +30,7 @@ RenderManager::RenderManager(int w, int h){
         }
     }
     this->debug = 0;
+    glUseProgram(this->glProgramId);
 }
 
 RenderManager::~RenderManager(void){}
@@ -71,6 +72,7 @@ void RenderManager::_initSDL(int width, int height){
 			SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
 			SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 			SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
+            SDL_GL_SetSwapInterval(0);
 			this->glContext = SDL_GL_CreateContext(this->window);
 			if(this->glContext == NULL) {
 				std::cout << "OpenGL context could not be created! SDL Error: " << SDL_GetError() << std::endl;
@@ -122,16 +124,10 @@ void RenderManager::_loadShader( void ){
 void RenderManager::draw(void){
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glUseProgram(this->glProgramId);
     Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_localToWorld();
     glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "VP"), 1, GL_TRUE, (const GLfloat*)&VP.value);
 
     for (int i = 0; i < this->meshes.size(); i++){
-        // if (this->debug && i == 1){
-        //     std::cout <<  this->meshes[i] << std::endl;
-        //     this->debug = 0;
-
-        // }
         if (this->meshes[i].ready == false)
             continue;
 
@@ -156,20 +152,17 @@ void RenderManager::draw(void){
     SDL_GL_SwapWindow(this->window);
 }
 
-void RenderManager::showFPS(float FPS, bool print ){
-    static int i =0;
+void RenderManager::showFPS(float FPS, int frameIndex ){
     static float mo = 0;
 
-    if (!print)
+    if (frameIndex < 29)
     {
         mo += FPS;
-        i++;
         return;
     }
 
     char str[100];
-    sprintf(str, "%.1f", mo/i);
+    sprintf(str, "%.1f", mo/30);
     SDL_SetWindowTitle(this->window, str);
     mo = 0;
-    i =0;
 }

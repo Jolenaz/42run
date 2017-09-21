@@ -150,6 +150,33 @@ Classes/GameObject.class.cpp.s:
 	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GameObject.class.cpp.s
 .PHONY : Classes/GameObject.class.cpp.s
 
+Classes/GamePlay/Player.class.o: Classes/GamePlay/Player.class.cpp.o
+
+.PHONY : Classes/GamePlay/Player.class.o
+
+# target to build an object file
+Classes/GamePlay/Player.class.cpp.o:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o
+.PHONY : Classes/GamePlay/Player.class.cpp.o
+
+Classes/GamePlay/Player.class.i: Classes/GamePlay/Player.class.cpp.i
+
+.PHONY : Classes/GamePlay/Player.class.i
+
+# target to preprocess a source file
+Classes/GamePlay/Player.class.cpp.i:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.i
+.PHONY : Classes/GamePlay/Player.class.cpp.i
+
+Classes/GamePlay/Player.class.s: Classes/GamePlay/Player.class.cpp.s
+
+.PHONY : Classes/GamePlay/Player.class.s
+
+# target to generate assembly for a file
+Classes/GamePlay/Player.class.cpp.s:
+	$(MAKE) -f CMakeFiles/42run.dir/build.make CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.s
+.PHONY : Classes/GamePlay/Player.class.cpp.s
+
 Classes/GamePlay/SceneManager.class.o: Classes/GamePlay/SceneManager.class.cpp.o
 
 .PHONY : Classes/GamePlay/SceneManager.class.o
@@ -540,6 +567,9 @@ help:
 	@echo "... Classes/GameObject.class.o"
 	@echo "... Classes/GameObject.class.i"
 	@echo "... Classes/GameObject.class.s"
+	@echo "... Classes/GamePlay/Player.class.o"
+	@echo "... Classes/GamePlay/Player.class.i"
+	@echo "... Classes/GamePlay/Player.class.s"
 	@echo "... Classes/GamePlay/SceneManager.class.o"
 	@echo "... Classes/GamePlay/SceneManager.class.i"
 	@echo "... Classes/GamePlay/SceneManager.class.s"

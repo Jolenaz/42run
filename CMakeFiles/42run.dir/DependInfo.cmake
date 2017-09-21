@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jbelless/42run/Classes/GameObject.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o"
+  "/Users/jbelless/42run/Classes/GamePlay/Player.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o"
   "/Users/jbelless/42run/Classes/GamePlay/SceneManager.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o"
   "/Users/jbelless/42run/Classes/Math/Mat2.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o"
   "/Users/jbelless/42run/Classes/Math/Mat3.class.cpp" "/Users/jbelless/42run/CMakeFiles/42run.dir/Classes/Math/Mat3.class.cpp.o"

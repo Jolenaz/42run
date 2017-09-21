@@ -34,6 +34,7 @@ set(SOURCE_FILES
 	Classes/Transform.class.cpp
 	Classes/GameObject.class.cpp
 	Classes/GamePlay/SceneManager.class.cpp
+	Classes/GamePlay/Player.class.cpp
 	)
 
 add_executable(42run ${SOURCE_FILES})

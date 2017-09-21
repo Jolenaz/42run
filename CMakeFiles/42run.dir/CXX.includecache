@@ -568,7 +568,25 @@ Transform.class.hpp
 RenderManager.class.hpp
 /Users/jbelless/42run/Classes/RenderManager.class.hpp
 
+/Users/jbelless/42run/Classes/GamePlay/Player.class.cpp
+Player.class.hpp
+/Users/jbelless/42run/Classes/GamePlay/Player.class.hpp
+
+/Users/jbelless/42run/Classes/GamePlay/Player.class.hpp
+GameObject.class.hpp
+/Users/jbelless/42run/Classes/GamePlay/GameObject.class.hpp
+
 /Users/jbelless/42run/Classes/GamePlay/SceneManager.class.cpp
+SceneManager.class.hpp
+/Users/jbelless/42run/Classes/GamePlay/SceneManager.class.hpp
+
+/Users/jbelless/42run/Classes/GamePlay/SceneManager.class.hpp
+Player.class.hpp
+/Users/jbelless/42run/Classes/GamePlay/Player.class.hpp
+cstdlib
+-
+ctime
+-
 
 /Users/jbelless/42run/Classes/Math/Mat2.class.cpp
 Mat2.class.hpp
@@ -701,8 +719,6 @@ joMath.hpp
 /Users/jbelless/42run/src/main.cpp
 42run.hpp
 /Users/jbelless/42run/src/42run.hpp
-ctime
--
 
 Classes/GameObject.class.hpp
 Transform.class.hpp
@@ -710,7 +726,17 @@ Classes/Transform.class.hpp
 RenderManager.class.hpp
 Classes/RenderManager.class.hpp
 
+Classes/GamePlay/Player.class.hpp
+GameObject.class.hpp
+Classes/GamePlay/GameObject.class.hpp
+
 Classes/GamePlay/SceneManager.class.hpp
+Player.class.hpp
+Classes/GamePlay/Player.class.hpp
+cstdlib
+-
+ctime
+-
 
 Classes/Math/Mat2.class.hpp
 joMath.hpp
@@ -815,6 +841,8 @@ include/struct.hpp
 include/gamePlay.hpp
 SceneManager.class.hpp
 include/SceneManager.class.hpp
+Player.class.hpp
+include/Player.class.hpp
 
 include/joMath.hpp
 cmath
