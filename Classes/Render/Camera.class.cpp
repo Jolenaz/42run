@@ -62,7 +62,7 @@ void Camera::translateCam(Vec3 trans){
 
     Vec3 newTrans( this->transform.get_worldToLocal() * trans4 );
 
-    this->transform.position += newTrans;
+    this->transform.translate(newTrans);
 
 }
 

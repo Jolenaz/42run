@@ -27,7 +27,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "third-party/glad/include"
   "/Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2"
-  "/System/Library/Frameworks/OpenGL.framework"
+  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework"
   "Classes"
   "Classes/Math"
   "Classes/Render"

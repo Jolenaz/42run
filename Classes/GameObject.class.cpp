@@ -20,10 +20,7 @@ GameObject::GameObject(){
 
 GameObject::GameObject(GameObject * parent){
     this->meshName = "cube";
-    this->_parent = parent;
-    this->transform.parent = &parent->transform;
-    if (this->_parent != NULL)
-        this->_parent->addChild(this);
+    this->set_parent(parent);
     RenderManager::addObject(this);
 }
 
@@ -37,6 +34,11 @@ GameObject::GameObject(GameObject const & src){
 }
 
 GameObject::~GameObject(){
+    int j = this->_children.size();
+    for (int i = 0; i < j; i++)
+    {
+        delete this->_children[0];
+    }
     RenderManager::removeObject(this);
     if (this->_parent != NULL)
         this->_parent->removeChild(this);
@@ -56,8 +58,6 @@ GameObject * GameObject::get_parent() const{
 }
 
 void GameObject::set_parent(GameObject * parent){
-    if (this->_parent != NULL)
-        this->_parent->removeChild(this);
     this->transform.parent = &parent->transform;
     this->_parent = parent;
     this->_parent->addChild(this);

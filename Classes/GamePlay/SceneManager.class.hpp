@@ -5,10 +5,15 @@
 
 #define NB_ROOM 10
 
+struct Mobilier{
+    std::string room;
+    std::vector<std::string> mobilier;
+};
+
 class SceneManager{
 
-    std::vector<std::string> roomType = {
-        "room_cluster"
+    std::vector<Mobilier> roomType = {
+        {"room_cluster", {"chaise", "poubelle"} }
     };
 
     public:
@@ -18,18 +23,25 @@ class SceneManager{
 
     void update(double delta);
 
+    bool debug;
+
+    Player * player;
+
     private:
     SceneManager(void);
     SceneManager(SceneManager const &);
     SceneManager & operator=(SceneManager const &);
     void init_scene(Player *player, bool isDemo);
 
+
     GameObject  *rooms[NB_ROOM];
     bool        isDemo;
     float       speed;
 
     GameObject  *new_room(int index);
+    void        add_obstacle(GameObject & room, Mobilier & mob, int index);
 
-    Player * player;
+   // std::vector<GameObject *> obstacles;
+
 
 };

@@ -25,7 +25,7 @@ int main_loop(RenderManager & rManager, GameObject *rooms)
 	{
 		if (ev.key.keysym.sym == SDLK_c || ev.key.keysym.sym == SDLK_ESCAPE || ev.type == SDL_QUIT)
 			return (0);
-{
+
         // if (ev.key.keysym.sym == SDLK_w){
         //     rManager.cam.translateCam(Vec3(0,0,-1)); 
         //     rManager.debug = 1;}
@@ -56,7 +56,6 @@ int main_loop(RenderManager & rManager, GameObject *rooms)
         // if (ev.key.keysym.sym == SDLK_RIGHT){
         //     rManager.cam.transform.rotate(Vec3(0,-5,0));
         //     rManager.debug = 1;}
-}
         if (ev.key.keysym.sym == SDLK_w)
             rooms->transform.translate(Vec3(0,0,-0.25));
         if (ev.key.keysym.sym == SDLK_s)
@@ -70,7 +69,7 @@ int main_loop(RenderManager & rManager, GameObject *rooms)
         if (ev.key.keysym.sym == SDLK_e)
             rooms->transform.translate(Vec3(0,0.25,0));
         if (ev.key.keysym.sym == SDLK_t)
-            std::cout << rooms->transform.position << std::endl;
+            std::cout << rooms->transform.get_position() << std::endl;
 
 	}
     return (1);
@@ -80,8 +79,6 @@ int main_loop(RenderManager & rManager)
 {
     SDL_Event		ev;
     SDL_PumpEvents();
-
-
 
 	if (SDL_PollEvent(&ev))
 	{
@@ -118,7 +115,30 @@ int main_loop(RenderManager & rManager)
             rManager.cam.transform.rotate(Vec3(0,-5,0));
             rManager.debug = 1;}
         if (ev.key.keysym.sym == SDLK_t){
-            std::cout << rManager.cam.transform.position << std::endl;
+            std::cout << rManager.cam.transform.get_position() << std::endl;
+        }
+
+	}
+    return (1);
+}
+
+int main_loop(SceneManager & sManager)
+{
+    SDL_Event		ev;
+    SDL_PumpEvents();
+
+	if (SDL_PollEvent(&ev))
+	{
+		if (ev.key.keysym.sym == SDLK_c || ev.key.keysym.sym == SDLK_ESCAPE || ev.type == SDL_QUIT)
+			return (0);
+        if (ev.key.keysym.sym == SDLK_LEFT&& ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+            sManager.player->move_left();
+            sManager.debug = 1;}
+        if (ev.key.keysym.sym == SDLK_RIGHT&& ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+            sManager.player->move_right();
+            sManager.debug = 1;}
+        if (ev.key.keysym.sym == SDLK_t ){
+            std::cout << sManager.player->cam->transform.get_position() << std::endl;
         }
 
 	}

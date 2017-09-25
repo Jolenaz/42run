@@ -162,7 +162,7 @@ void RenderManager::showFPS(float FPS, int frameIndex ){
     }
 
     char str[100];
-    sprintf(str, "%.1f", mo/30);
+    sprintf(str, "%.1f pour %lu objects", mo/30, this->gameObjects.size());
     SDL_SetWindowTitle(this->window, str);
     mo = 0;
 }

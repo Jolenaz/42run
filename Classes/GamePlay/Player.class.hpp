@@ -13,4 +13,11 @@ class Player : public GameObject{
 
     Camera * cam;
 
+    void move_right ( void );
+    void move_left ( void );
+
+    private:
+
+    int _rail; 
+
 };

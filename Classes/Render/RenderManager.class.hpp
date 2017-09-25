@@ -31,7 +31,10 @@ class RenderManager{
 
     std::vector<std::string> meshNames = 
     {
-        "screen", "room_cluster"
+        "screen",
+        "room_cluster",
+        "chaise",
+        "poubelle"
     };
 
     std::vector<t_shader_info> shaders = {
