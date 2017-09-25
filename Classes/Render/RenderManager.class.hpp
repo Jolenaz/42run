@@ -31,6 +31,7 @@ class RenderManager{
 
     std::vector<std::string> meshNames = 
     {
+        "test",
         "screen",
         "room_cluster",
         "chaise",

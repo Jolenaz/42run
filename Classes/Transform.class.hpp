@@ -46,6 +46,8 @@ class Transform{
     Vec3 & get_rotation( void );
     Vec3 & get_scale( void );
 
+    void recalcTransform( void );
+
     private:
 
     bool needCalculation;
@@ -53,8 +55,6 @@ class Transform{
     Vec3 position;
     Vec3 rotation;
     Vec3 scale;
-
-
 
     Mat4    _worldToLocal;
     Mat4    _localToWorld;

@@ -16,8 +16,9 @@ class Player : public GameObject{
     void move_right ( void );
     void move_left ( void );
 
+    int rail;
+
     private:
 
-    int _rail; 
 
 };

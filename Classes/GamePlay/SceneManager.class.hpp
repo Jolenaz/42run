@@ -16,6 +16,7 @@ class SceneManager{
         {"room_cluster", {"chaise", "poubelle"} }
     };
 
+
     public:
     SceneManager(Player *player);
     SceneManager(Player *player, bool isDemo);
@@ -24,6 +25,7 @@ class SceneManager{
     void update(double delta);
 
     bool debug;
+    bool pause;
 
     Player * player;
 
@@ -39,9 +41,15 @@ class SceneManager{
     float       speed;
 
     GameObject  *new_room(int index);
+    GameObject  *new_room( void );
     void        add_obstacle(GameObject & room, Mobilier & mob, int index);
 
-   // std::vector<GameObject *> obstacles;
+
+    std::vector<GameObject *> obstacles[3];
+
+    bool check_collision(void);
+
+    void remove_obstacles(std::vector<GameObject *> children);
 
 
 };

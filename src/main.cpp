@@ -131,6 +131,8 @@ int main_loop(SceneManager & sManager)
 	{
 		if (ev.key.keysym.sym == SDLK_c || ev.key.keysym.sym == SDLK_ESCAPE || ev.type == SDL_QUIT)
 			return (0);
+        if (sManager.pause)
+            return (1);
         if (ev.key.keysym.sym == SDLK_LEFT&& ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
             sManager.player->move_left();
             sManager.debug = 1;}
@@ -156,8 +158,9 @@ int main()
     int     tmp;
     double  delta;
     double   timeru = 0;
+    sManager.pause = false;
 
-    while(main_loop(rManager))
+    while(main_loop(sManager))
     {
         tmp = SDL_GetTicks() - old_time;
         delta = (double)tmp / 1000.0;

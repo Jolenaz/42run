@@ -35,11 +35,11 @@ class GameObject{
     void addChild(GameObject *);
     void removeChild(GameObject *);
 
-    protected:
 
     GameObject * _parent;
     std::vector<GameObject *> _children;
     
+    protected:
 
     // attribus
 
