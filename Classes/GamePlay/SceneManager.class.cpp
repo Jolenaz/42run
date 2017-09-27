@@ -29,7 +29,7 @@ void SceneManager::init_scene(Player *player, bool isDemo){
 SceneManager::~SceneManager(void){}
 
 void        SceneManager::add_obstacle(GameObject & room, Mobilier & mob, int index){
-    if (rand() % 100 < 70)
+    if ((rand() % 100) < 65)
         return;
     GameObject *ob = new GameObject();
     ob->meshName = mob.mobilier[rand() % mob.mobilier.size()];
@@ -67,13 +67,15 @@ GameObject  *SceneManager::new_room(int index){
 bool SceneManager::check_collision()
 {
     std::vector<GameObject *> tab = this->obstacles[this->player->rail];
+    bool pr = true;
     for (GameObject * ob : tab)
     {
-        Vec4 pOb(ob->transform.get_position(),1.0f);
-        pOb = this->player->transform.get_localToWorld() * ob->transform.get_worldToLocal() * pOb;
-        float dist = pOb.w != 0.0f ? pOb.z / pOb.w : pOb.z;
-        if (dist < 0.3f && dist > 0.0f){
-            std::cout << "distance : " << dist << std::endl;
+        Vec4 zOb = ob->transform.get_worldToLocal() * Vec4(ob->transform.get_position(),1.0f);
+        Vec4 zPl = this->player->transform.get_worldToLocal() * Vec4(this->player->transform.get_position(),1.0f);
+        float zP = zPl.w != 0.0f ? zPl.z / zPl.w : zPl.z;
+        float zO = zOb.w != 0.0f ? zOb.z / zOb.w : zOb.z;
+        if (zP - zO > -0.3f && zP - zO < 0.0f){
+            std::cout << "collision distance : " << zP - zO << std::endl;
             return (1);
         }
     }
@@ -103,6 +105,7 @@ void SceneManager::update(double delta){
     {
         this->pause = true;
         std::cout << "collide" << std::endl;
+        return;
     }
     for (int i = 0; i < NB_ROOM; i++)
     {

@@ -18,7 +18,11 @@
 #include "ObjParser.class.hpp"
 #include "Camera.class.hpp"
 #include <SDL.h>
-#include <OpenGL/gl3.h> 
+#include <OpenGL/gl3.h>
+
+
+#include "nuklear.h"
+#include "nuklear_sdl_gl3.h"
 
 class GameObject;
 
@@ -31,10 +35,12 @@ class RenderManager{
 
     std::vector<std::string> meshNames = 
     {
-        "test",
+        "player",
         "screen",
         "room_cluster",
-        "chaise",
+        "chaise_v",
+        "chaise_b",
+        "chaise_r",
         "poubelle"
     };
 
@@ -76,6 +82,7 @@ class RenderManager{
     int             glProgramId;
     void _loadShader( void );
 
+
     // fonctions membres
 
     RenderManager(void);
@@ -91,4 +98,6 @@ class RenderManager{
 
     int debug;
 
+    struct nk_color nkBackground;
+    struct nk_context *nkContext;
 };

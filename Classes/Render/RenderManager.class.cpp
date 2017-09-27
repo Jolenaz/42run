@@ -10,12 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RenderManager.class.hpp"
+#define NK_INCLUDE_FIXED_TYPES
+#define NK_INCLUDE_STANDARD_IO
+#define NK_INCLUDE_STANDARD_VARARGS
+#define NK_INCLUDE_DEFAULT_ALLOCATOR
+#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
+#define NK_INCLUDE_FONT_BAKING
+#define NK_INCLUDE_DEFAULT_FONT
+#define NK_IMPLEMENTATION
+#define NK_SDL_GL3_IMPLEMENTATION
+#define MAX_VERTEX_MEMORY 512 * 1024
+#define MAX_ELEMENT_MEMORY 128 * 1024
 
+// #include "nuklear.h"
+// #include "nuklear_sdl_gl3.h"
+
+#include "RenderManager.class.hpp"
 RenderManager::RenderManager(int w, int h){
     this->_initSDL(w, h);
     this->_loadShader();
     cam.ratio = (float)w / (float)h;
+    cam.transform.translate(Vec3(0,0.5,-0.3));
+    cam.transform.rotate(Vec3(-20.0,0,0));
     for(std::string meshName : meshNames)
     {
         meshes.push_back( this->parser.parseObj( meshName ) );
@@ -53,7 +69,7 @@ void RenderManager::removeObject(GameObject * go){
 }
 
 void RenderManager::_initSDL(int width, int height){
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER|SDL_INIT_EVENTS) < 0) {
 		std::cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
 	} else {
 		this->window = SDL_CreateWindow("HumanGL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN );
@@ -72,15 +88,22 @@ void RenderManager::_initSDL(int width, int height){
 			SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
 			SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 			SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
-            SDL_GL_SetSwapInterval(0);
 			this->glContext = SDL_GL_CreateContext(this->window);
+            SDL_GL_SetSwapInterval(0);
 			if(this->glContext == NULL) {
 				std::cout << "OpenGL context could not be created! SDL Error: " << SDL_GetError() << std::endl;
 			}
 			glEnable(GL_DEPTH_TEST);
+            glEnable(GL_BLEND);
             // glEnable(GL_CULL_FACE);
             // glCullFace(GL_BACK);
 			// glDepthFunc(GL_LESS);
+            this->nkContext = nk_sdl_init(this->window);
+            struct nk_font_atlas *atlas;
+            nk_sdl_font_stash_begin(&atlas);
+            nk_sdl_font_stash_end();
+
+            this->nkBackground = nk_rgba(28,48,62,0);
 
 		}
 	}
@@ -123,10 +146,15 @@ void RenderManager::_loadShader( void ){
 
 void RenderManager::draw(void){
 
+    float bg[4];
+    nk_color_fv(bg, this->nkBackground);
+    glClearColor(bg[0], bg[1], bg[2], bg[3]);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_localToWorld();
     glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "VP"), 1, GL_TRUE, (const GLfloat*)&VP.value);
 
+    glUseProgram(this->glProgramId);
+    glEnable(GL_DEPTH_TEST);
     for (int i = 0; i < this->meshes.size(); i++){
         if (this->meshes[i].ready == false)
             continue;
@@ -148,7 +176,7 @@ void RenderManager::draw(void){
         glDrawArraysInstanced(GL_TRIANGLES, 0, this->meshes[i].vertices.size(), models.size());
 
     }
-
+    nk_sdl_render(NK_ANTI_ALIASING_ON, MAX_VERTEX_MEMORY, MAX_ELEMENT_MEMORY);
     SDL_GL_SwapWindow(this->window);
 }
 

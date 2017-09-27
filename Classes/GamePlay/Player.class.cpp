@@ -2,9 +2,9 @@
 
 Player::Player(Camera * cam) : GameObject(){
     this->cam = cam;
-    this->meshName = "test";
-    this->transform.scalate(Vec3(0.2,0.2,0.2));
-    this->transform.translate(Vec3(0,-0.5,-1.2));
+    this->meshName = "player";
+    this->transform.scalate(Vec3(0.14,0.14,0.11));
+    this->transform.translate(Vec3(0,-1,-1.5));
     this->rail = 1;
 }
 

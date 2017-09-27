@@ -13,7 +13,7 @@ struct Mobilier{
 class SceneManager{
 
     std::vector<Mobilier> roomType = {
-        {"room_cluster", {"chaise", "poubelle"} }
+        {"room_cluster", {"chaise_r", "chaise_b" ,"chaise_v", "poubelle"} }
     };
 
 
