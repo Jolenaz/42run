@@ -66,6 +66,8 @@ GameObject  *SceneManager::new_room(int index){
 
 bool SceneManager::check_collision()
 {
+    if (this->player->rail == -1)
+        return false;
     std::vector<GameObject *> tab = this->obstacles[this->player->rail];
     bool pr = true;
     for (GameObject * ob : tab)
@@ -76,11 +78,11 @@ bool SceneManager::check_collision()
         float zO = zOb.w != 0.0f ? zOb.z / zOb.w : zOb.z;
         if (zP - zO > -0.3f && zP - zO < 0.0f){
             std::cout << "collision distance : " << zP - zO << std::endl;
-            return (1);
+            return true;
         }
     }
 
-    return (0);
+    return false;
 }
 
 void SceneManager::remove_obstacles(std::vector<GameObject *> children){

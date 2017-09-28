@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "42run.hpp"
-// #include "glm/glm.hpp"
-// #include "glm/ext.hpp"
 
 int main_loop(RenderManager & rManager, GameObject *rooms)
 {
@@ -125,7 +123,6 @@ int main_loop(RenderManager & rManager)
 int main_loop(SceneManager & sManager, RenderManager & rManager)
 {
     SDL_Event		ev;
-    //SDL_PumpEvents();
 
 	while (SDL_PollEvent(&ev))
 	{
@@ -133,11 +130,20 @@ int main_loop(SceneManager & sManager, RenderManager & rManager)
 			return (0);
         if (sManager.pause)
             return (1);
-        if (ev.key.keysym.sym == SDLK_LEFT&& ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+        if (ev.key.keysym.sym == SDLK_LEFT && ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
             sManager.player->move_left();
             sManager.debug = 1;}
-        if (ev.key.keysym.sym == SDLK_RIGHT&& ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+        if (ev.key.keysym.sym == SDLK_LEFT && ev.key.repeat == 0 && ev.key.type == SDL_KEYUP){
             sManager.player->move_right();
+            sManager.debug = 1;}
+        if (ev.key.keysym.sym == SDLK_RIGHT && ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+            sManager.player->move_right();
+            sManager.debug = 1;}
+        if (ev.key.keysym.sym == SDLK_RIGHT && ev.key.repeat == 0 && ev.key.type == SDL_KEYUP){
+            sManager.player->move_left();
+            sManager.debug = 1;}
+        if (ev.key.keysym.sym == SDLK_UP && ev.key.repeat == 0 && ev.key.type == SDL_KEYDOWN){
+            sManager.player->jump();
             sManager.debug = 1;}
         if (ev.key.keysym.sym == SDLK_t ){
             std::cout << sManager.player->cam->transform.get_position() << std::endl;
@@ -169,6 +175,7 @@ int main()
         rManager.showFPS(1/delta, i);
         rManager.draw();
         sManager.update(delta);
+        player.update(delta);
         i = i < 29 ? i + 1 : 0;
     }
 

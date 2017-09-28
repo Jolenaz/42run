@@ -18,6 +18,9 @@ class Player : public GameObject{
 
     int rail;
 
+    void jump(void);
+    void update(float delta);
+
     private:
 
 
