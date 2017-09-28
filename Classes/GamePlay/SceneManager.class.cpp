@@ -29,7 +29,7 @@ void SceneManager::init_scene(Player *player, bool isDemo){
 SceneManager::~SceneManager(void){}
 
 void        SceneManager::add_obstacle(GameObject & room, Mobilier & mob, int index){
-    if ((rand() % 100) < 65)
+    if ((rand() % 100) < mob.dif)
         return;
     GameObject *ob = new GameObject();
     ob->meshName = mob.mobilier[rand() % mob.mobilier.size()];

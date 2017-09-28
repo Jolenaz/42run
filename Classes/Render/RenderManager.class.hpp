@@ -20,10 +20,6 @@
 #include <SDL.h>
 #include <OpenGL/gl3.h>
 
-
-#include "nuklear.h"
-#include "nuklear_sdl_gl3.h"
-
 class GameObject;
 
 class RenderManager{
@@ -36,6 +32,10 @@ class RenderManager{
     std::vector<std::string> meshNames = 
     {
         "player",
+        "e1",
+        "e2",
+        "tm",
+        "couloir",
         "screen",
         "room_cluster",
         "chaise_v",
@@ -97,7 +97,4 @@ class RenderManager{
     static void removeObject(GameObject *);
 
     int debug;
-
-    struct nk_color nkBackground;
-    struct nk_context *nkContext;
 };

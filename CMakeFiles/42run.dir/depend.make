@@ -59,8 +59,6 @@ CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: Classes/Render/ObjParser.cl
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: Classes/Render/RenderManager.class.hpp
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: Classes/Render/Vertex.class.hpp
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: include/joMath.hpp
-CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: include/nuklear.h
-CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: include/nuklear_sdl_gl3.h
 CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o: include/struct.hpp
 
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: /Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2/SDL.h
@@ -122,8 +120,6 @@ CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: Classes/Render/RenderM
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: Classes/Render/Vertex.class.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: Classes/Transform.class.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: include/joMath.hpp
-CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: include/nuklear.h
-CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: include/nuklear_sdl_gl3.h
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o: include/struct.hpp
 
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: /Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2/SDL.h
@@ -186,8 +182,6 @@ CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: Classes/Render/R
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: Classes/Render/Vertex.class.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: Classes/Transform.class.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: include/joMath.hpp
-CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: include/nuklear.h
-CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: include/nuklear_sdl_gl3.h
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o: include/struct.hpp
 
 CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o: Classes/Math/Mat2.class.cpp
@@ -424,8 +418,6 @@ CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: Classes/Math/Vec3
 CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: Classes/Math/Vec4.class.hpp
 CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: Classes/Transform.class.hpp
 CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: include/joMath.hpp
-CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: include/nuklear.h
-CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: include/nuklear_sdl_gl3.h
 CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o: include/struct.hpp
 
 CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o: Classes/Render/Vertex.class.cpp
@@ -510,8 +502,6 @@ CMakeFiles/42run.dir/src/main.cpp.o: Classes/Transform.class.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: include/42run.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: include/gamePlay.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: include/joMath.hpp
-CMakeFiles/42run.dir/src/main.cpp.o: include/nuklear.h
-CMakeFiles/42run.dir/src/main.cpp.o: include/nuklear_sdl_gl3.h
 CMakeFiles/42run.dir/src/main.cpp.o: include/render.hpp
 CMakeFiles/42run.dir/src/main.cpp.o: include/struct.hpp
 

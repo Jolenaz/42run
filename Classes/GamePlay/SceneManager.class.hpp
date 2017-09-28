@@ -8,12 +8,16 @@
 struct Mobilier{
     std::string room;
     std::vector<std::string> mobilier;
+    int dif;
 };
 
 class SceneManager{
 
     std::vector<Mobilier> roomType = {
-        {"room_cluster", {"chaise_r", "chaise_b" ,"chaise_v", "poubelle"} }
+        {"couloir", {"poubelle"}, 80},
+         {"e1", {"chaise_r", "chaise_b" ,"chaise_v", "poubelle"}, 70},
+         {"tm", {"chaise_r", "chaise_b" ,"chaise_v", "poubelle"}, 70},
+         {"e2", {"chaise_r", "chaise_b" ,"chaise_v", "poubelle"}, 70}
     };
 
 

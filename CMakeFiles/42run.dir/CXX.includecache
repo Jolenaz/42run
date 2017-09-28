@@ -699,10 +699,6 @@ SDL.h
 -
 OpenGL/gl3.h
 -
-nuklear.h
-/Users/jbelless/42run/Classes/Render/nuklear.h
-nuklear_sdl_gl3.h
-/Users/jbelless/42run/Classes/Render/nuklear_sdl_gl3.h
 
 /Users/jbelless/42run/Classes/Render/Vertex.class.cpp
 Vertex.class.hpp
@@ -813,10 +809,6 @@ SDL.h
 -
 OpenGL/gl3.h
 -
-nuklear.h
-Classes/Render/nuklear.h
-nuklear_sdl_gl3.h
-Classes/Render/nuklear_sdl_gl3.h
 
 Classes/Render/Vertex.class.hpp
 joMath.hpp
@@ -869,28 +861,6 @@ Mat3.class.hpp
 include/Mat3.class.hpp
 Mat4.class.hpp
 include/Mat4.class.hpp
-
-include/nuklear.h
-nuklear.h
-include/nuklear.h
-stdint.h
--
-stdlib.h
--
-stdio.h
--
-stdarg.h
--
-assert.h
--
-
-include/nuklear_sdl_gl3.h
-SDL.h
--
-OpenGL/gl3.h
--
-string.h
--
 
 include/render.hpp
 SDL.h

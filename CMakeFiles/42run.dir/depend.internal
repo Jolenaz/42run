@@ -60,8 +60,6 @@ CMakeFiles/42run.dir/Classes/GameObject.class.cpp.o
  Classes/Render/RenderManager.class.hpp
  Classes/Render/Vertex.class.hpp
  include/joMath.hpp
- include/nuklear.h
- include/nuklear_sdl_gl3.h
  include/struct.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o
  /Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2/SDL.h
@@ -123,8 +121,6 @@ CMakeFiles/42run.dir/Classes/GamePlay/Player.class.cpp.o
  Classes/Render/Vertex.class.hpp
  Classes/Transform.class.hpp
  include/joMath.hpp
- include/nuklear.h
- include/nuklear_sdl_gl3.h
  include/struct.hpp
 CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o
  /Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2/SDL.h
@@ -187,8 +183,6 @@ CMakeFiles/42run.dir/Classes/GamePlay/SceneManager.class.cpp.o
  Classes/Render/Vertex.class.hpp
  Classes/Transform.class.hpp
  include/joMath.hpp
- include/nuklear.h
- include/nuklear_sdl_gl3.h
  include/struct.hpp
 CMakeFiles/42run.dir/Classes/Math/Mat2.class.cpp.o
  /Users/jbelless/42run/Classes/Math/Mat2.class.cpp
@@ -425,8 +419,6 @@ CMakeFiles/42run.dir/Classes/Render/RenderManager.class.cpp.o
  Classes/Math/Vec4.class.hpp
  Classes/Transform.class.hpp
  include/joMath.hpp
- include/nuklear.h
- include/nuklear_sdl_gl3.h
  include/struct.hpp
 CMakeFiles/42run.dir/Classes/Render/Vertex.class.cpp.o
  /Users/jbelless/42run/Classes/Render/Vertex.class.cpp
@@ -511,7 +503,5 @@ CMakeFiles/42run.dir/src/main.cpp.o
  include/42run.hpp
  include/gamePlay.hpp
  include/joMath.hpp
- include/nuklear.h
- include/nuklear_sdl_gl3.h
  include/render.hpp
  include/struct.hpp

@@ -10,20 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#define NK_INCLUDE_FIXED_TYPES
-#define NK_INCLUDE_STANDARD_IO
-#define NK_INCLUDE_STANDARD_VARARGS
-#define NK_INCLUDE_DEFAULT_ALLOCATOR
-#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
-#define NK_INCLUDE_FONT_BAKING
-#define NK_INCLUDE_DEFAULT_FONT
-#define NK_IMPLEMENTATION
-#define NK_SDL_GL3_IMPLEMENTATION
-#define MAX_VERTEX_MEMORY 512 * 1024
-#define MAX_ELEMENT_MEMORY 128 * 1024
-
-// #include "nuklear.h"
-// #include "nuklear_sdl_gl3.h"
 
 #include "RenderManager.class.hpp"
 RenderManager::RenderManager(int w, int h){
@@ -98,12 +84,6 @@ void RenderManager::_initSDL(int width, int height){
             // glEnable(GL_CULL_FACE);
             // glCullFace(GL_BACK);
 			// glDepthFunc(GL_LESS);
-            this->nkContext = nk_sdl_init(this->window);
-            struct nk_font_atlas *atlas;
-            nk_sdl_font_stash_begin(&atlas);
-            nk_sdl_font_stash_end();
-
-            this->nkBackground = nk_rgba(28,48,62,0);
 
 		}
 	}
@@ -146,9 +126,6 @@ void RenderManager::_loadShader( void ){
 
 void RenderManager::draw(void){
 
-    float bg[4];
-    nk_color_fv(bg, this->nkBackground);
-    glClearColor(bg[0], bg[1], bg[2], bg[3]);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_localToWorld();
     glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "VP"), 1, GL_TRUE, (const GLfloat*)&VP.value);
@@ -176,7 +153,6 @@ void RenderManager::draw(void){
         glDrawArraysInstanced(GL_TRIANGLES, 0, this->meshes[i].vertices.size(), models.size());
 
     }
-    nk_sdl_render(NK_ANTI_ALIASING_ON, MAX_VERTEX_MEMORY, MAX_ELEMENT_MEMORY);
     SDL_GL_SwapWindow(this->window);
 }
 
