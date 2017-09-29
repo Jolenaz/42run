@@ -66,7 +66,7 @@ GameObject  *SceneManager::new_room(int index){
 
 bool SceneManager::check_collision()
 {
-    if (this->player->rail == -1)
+    if (this->player->jumping)
         return false;
     std::vector<GameObject *> tab = this->obstacles[this->player->rail];
     bool pr = true;

@@ -21,7 +21,14 @@ class Player : public GameObject{
     void jump(void);
     void update(float delta);
 
+    bool    jumping;
+    
     private:
 
+    bool    moving_right;
+    bool    moving_left;
+    float   lateral_speed;
+    Vec3    init_pos;
+    float   vertical_speed;
 
 };
