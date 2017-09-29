@@ -18,6 +18,7 @@
 #include "ObjParser.class.hpp"
 #include "Camera.class.hpp"
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <OpenGL/gl3.h>
 
 class GameObject;

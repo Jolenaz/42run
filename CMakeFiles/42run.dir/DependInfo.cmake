@@ -25,7 +25,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2"
+  "/Users/jbelless/.brew/Cellar/sdl2/2.0.6/include/SDL2"
   "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework"
   "Classes"
   "Classes/Math"

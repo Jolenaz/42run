@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++14 -isysroot /Applications/Xcode.app/Contents/Developer/P
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/jbelless/.brew/Cellar/sdl2/2.0.5/include/SDL2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks -I/Users/jbelless/42run/Classes -I/Users/jbelless/42run/Classes/Math -I/Users/jbelless/42run/Classes/Render -I/Users/jbelless/42run/Classes/GamePlay -I/Users/jbelless/42run/include -I/Users/jbelless/42run/glm 
+CXX_INCLUDES = -I/Users/jbelless/.brew/Cellar/sdl2/2.0.6/include/SDL2 -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks -I/Users/jbelless/42run/Classes -I/Users/jbelless/42run/Classes/Math -I/Users/jbelless/42run/Classes/Render -I/Users/jbelless/42run/Classes/GamePlay -I/Users/jbelless/42run/include -I/Users/jbelless/42run/glm 
 

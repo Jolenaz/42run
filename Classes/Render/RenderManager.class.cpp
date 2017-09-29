@@ -62,10 +62,6 @@ void RenderManager::_initSDL(int width, int height){
 		if (this->window == NULL) {
 			std::cout << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
 		} else {
-			// SDL_ShowCursor(SDL_DISABLE);
-			// SDL_WarpMouseInWindow(this->window, width / 2, height / 2);
-			// SDL_SetWindowGrab(this->window, SDL_TRUE);
-			// SDL_SetRelativeMouseMode(SDL_TRUE);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
@@ -84,7 +80,6 @@ void RenderManager::_initSDL(int width, int height){
             // glEnable(GL_CULL_FACE);
             // glCullFace(GL_BACK);
 			// glDepthFunc(GL_LESS);
-
 		}
 	}
 }

@@ -19,13 +19,13 @@ Player::~Player(){}
 void Player::move_right ( void){
     this->rail += 1;
     this->moving_right = true;
-    this->transform.rotate(Vec3(0,0,-5));
+    this->transform.rotate(Vec3(0,0,-10));
 }
 
 void Player::move_left ( void ){
     this->rail -= 1;
     this->moving_left = true;
-    this->transform.rotate(Vec3(0,0,5));
+    this->transform.rotate(Vec3(0,0,10));
 }
 
 void Player::jump(void){
@@ -33,8 +33,6 @@ void Player::jump(void){
         return;
     this->jumping = true;
     this->vertical_speed = 7.0f;
-
-    std::cout << "jump" << std::endl;
 }
 
 void Player::update(float delta){
