@@ -65,6 +65,8 @@ class RenderManager{
     void draw( void );
     void showFPS(float FPS , int frameIndex);
 
+    float score = 0.0f;
+
     private:
 
     // attribus nom membres

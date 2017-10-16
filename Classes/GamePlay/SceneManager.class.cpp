@@ -103,6 +103,7 @@ void SceneManager::remove_obstacles(std::vector<GameObject *> children){
 void SceneManager::update(double delta){
     if (this->pause)
         return;
+    this->score += delta * this->speed;
     if (this->check_collision())
     {
         this->pause = true;
@@ -111,7 +112,10 @@ void SceneManager::update(double delta){
     }
     for (int i = 0; i < NB_ROOM; i++)
     {
-        this->rooms[i]->transform.translate(Vec3(0,0,this->speed * delta));
+        if (this->score < 200)
+            this->rooms[i]->transform.translate(Vec3(0,0,this->speed * delta));
+        else
+        this->rooms[i]->transform.translate(Vec3(0,0,this->speed * delta * this->score / 200.0));
         if (this->rooms[i]->transform.get_position().z > 6){
             this->remove_obstacles(this->rooms[i]->_children);
             delete this->rooms[i];

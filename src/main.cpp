@@ -175,6 +175,7 @@ int main()
         rManager.showFPS(1/delta, i);
         rManager.draw();
         sManager.update(delta);
+        rManager.score = sManager.score;
         player.update(delta);
         i = i < 29 ? i + 1 : 0;
     }

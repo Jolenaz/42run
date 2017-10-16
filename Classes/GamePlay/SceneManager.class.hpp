@@ -27,6 +27,7 @@ class SceneManager{
     virtual ~SceneManager(void);
 
     void update(double delta);
+    float score = 0.0f;
 
     bool debug;
     bool pause;

@@ -164,4 +164,7 @@ void RenderManager::showFPS(float FPS, int frameIndex ){
     sprintf(str, "%.1f pour %lu objects", mo/30, this->gameObjects.size());
     SDL_SetWindowTitle(this->window, str);
     mo = 0;
+
+    sprintf(str, "distance : %d ", int(this->score));
+    SDL_SetWindowTitle(this->window, str);
 }
