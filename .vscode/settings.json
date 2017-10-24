@@ -4,6 +4,19 @@
         "new": "cpp",
         "typeinfo": "cpp",
         "*.tcc": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "vector": "cpp",
+        "__config": "cpp",
+        "cstddef": "cpp",
+        "initializer_list": "cpp",
+        "stdexcept": "cpp",
+        "__split_buffer": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "regex": "cpp",
+        "string": "cpp",
+        "utility": "cpp"
     }
 }

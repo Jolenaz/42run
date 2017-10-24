@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "RenderManager.class.hpp"
+
 RenderManager::RenderManager(int w, int h){
     this->_initSDL(w, h);
-    this->_loadShader();
+    this->glProgramId = this->_loadShader(this->shaders);
+    this->glUIProgramId = this->_loadShader(this->uiShaders);
     cam.ratio = (float)w / (float)h;
     cam.transform.translate(Vec3(0,0.5,-0.3));
     cam.transform.rotate(Vec3(-20.0,0,0));
@@ -31,9 +32,39 @@ RenderManager::RenderManager(int w, int h){
             this->meshes[i].create_vao();
         }
     }
+    this->textsMesh.name = "text";
+    this->textsMesh.textureID = this->parser.parseTexture("text");
+    this->textsMesh.vertices = this->create_letter_pos(0);
+    this->textsMesh.create_vao();
+
     this->debug = 0;
-    glUseProgram(this->glProgramId);
 }
+
+std::vector<Vertex> RenderManager::create_letter_pos(int index){
+    std::vector<Vertex> ret = {};
+    Vertex v_1(
+        Vec3(0.0f, 0.0f, 0.1f),
+        Vec2(0.0001f, 0.0001f),
+        Vec3(0.0f, 0.0f, 0.0f));
+    Vertex v_2(
+        Vec3(0.0f, 1.0f ,0.1f),
+        Vec2(0.0001f, 0.999f),
+        Vec3(0.0f, 0.0f, 0.0f));
+    Vertex v_3(
+        Vec3(1.0f, 0.0f, 0.1f),
+        Vec2(0.9999f, 0.0001f),
+        Vec3(0.0f, 0.0f, 0.0f));
+    Vertex v_4(
+        Vec3(1.0f, 1.0f, 0.1f),
+        Vec2(0.9999f, 0.9999f),
+        Vec3(0.0f, 0.0f, 0.0f));
+    ret.push_back(v_1);
+    ret.push_back(v_2);
+    ret.push_back(v_3);
+    ret.push_back(v_4);
+    return ret;
+}
+
 
 RenderManager::~RenderManager(void){}
 std::vector<GameObject*> RenderManager::gameObjects = {};
@@ -75,18 +106,13 @@ void RenderManager::_initSDL(int width, int height){
 			if(this->glContext == NULL) {
 				std::cout << "OpenGL context could not be created! SDL Error: " << SDL_GetError() << std::endl;
 			}
-			glEnable(GL_DEPTH_TEST);
-            glEnable(GL_BLEND);
-            // glEnable(GL_CULL_FACE);
-            // glCullFace(GL_BACK);
-			// glDepthFunc(GL_LESS);
 		}
 	}
 }
 
-void RenderManager::_loadShader( void ){
-    this->glProgramId = glCreateProgram();
-    for( t_shader_info si : this->shaders)
+int RenderManager::_loadShader( std::vector<t_shader_info> shaders ){
+    int ret = glCreateProgram();
+    for( t_shader_info si : shaders)
     {
         std::string line;
         std::string source_code;
@@ -114,19 +140,23 @@ void RenderManager::_loadShader( void ){
 	        glGetShaderInfoLog(shader_id, 10000, &compilation_return, buf);
 	        std::cout << buf << std::endl;
         }
-        glAttachShader(this->glProgramId, shader_id);
+        glAttachShader(ret, shader_id);
     }
-    glLinkProgram(this->glProgramId);
+    glLinkProgram(ret);
+    return ret;
 }
 
 void RenderManager::draw(void){
 
+    glUseProgram(this->glProgramId);
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     Mat4 VP =  this->cam.get_projMat() * this->cam.transform.get_localToWorld();
     glUniformMatrix4fv(glGetUniformLocation(this->glProgramId, "VP"), 1, GL_TRUE, (const GLfloat*)&VP.value);
-
-    glUseProgram(this->glProgramId);
+    
     glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
+
     for (int i = 0; i < this->meshes.size(); i++){
         if (this->meshes[i].ready == false)
             continue;
@@ -148,6 +178,16 @@ void RenderManager::draw(void){
         glDrawArraysInstanced(GL_TRIANGLES, 0, this->meshes[i].vertices.size(), models.size());
 
     }
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glUseProgram(this->glUIProgramId);
+    
+    glBindTexture(GL_TEXTURE_2D, this->textsMesh.textureID);
+    glBindVertexArray(this->textsMesh.vao);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, this->textsMesh.vertices.size());
+
     SDL_GL_SwapWindow(this->window);
 }
 

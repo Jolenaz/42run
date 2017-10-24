@@ -23,8 +23,10 @@ int ObjParser::parseTexture(std::string objName){
     //     return (-1);
     
 	FILE *file = fopen(("./Objects/" + objName + ".bmp").c_str(), "rb");
-	if (file == NULL)
-		return (-1);
+	if (file == NULL){
+        printf ("Error: File does not exist");
+        return (-1);
+    }
 
     unsigned int    data_pos;
     unsigned int    width, height;
@@ -36,8 +38,11 @@ int ObjParser::parseTexture(std::string objName){
     fread(header, 1, 138, file);
 	data_pos = *(int*)&(header[0x0A]);
 	width = *(int*)&(header[0x12]);
-	height = *(int*)&(header[0x16]);
-	image_size = width * height * 3;
+    height = *(int*)&(header[0x16]);
+    if (objName == "text")
+        image_size = width * height * 4;
+    else
+        image_size = width * height * 3;
     rewind(file);
     fread(header, 1, data_pos, file);
 	data = (char*)malloc(image_size * sizeof(char));
@@ -45,7 +50,10 @@ int ObjParser::parseTexture(std::string objName){
 	fclose(file);
 	glGenTextures(1, &(image_id));
 	glBindTexture(GL_TEXTURE_2D, image_id);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height,0, GL_BGR, GL_UNSIGNED_BYTE, data);
+    if (objName == "text")
+	    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height,0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    else
+	    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height,0, GL_BGR, GL_UNSIGNED_BYTE, data);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     free(data);

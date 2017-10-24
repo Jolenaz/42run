@@ -146,7 +146,7 @@ int main_loop(SceneManager & sManager, RenderManager & rManager)
             sManager.player->jump();
             sManager.debug = 1;}
         if (ev.key.keysym.sym == SDLK_t ){
-            std::cout << sManager.player->cam->transform.get_position() << std::endl;
+            rManager.debug = 1;
         }
 
 	}

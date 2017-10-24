@@ -48,6 +48,11 @@ class RenderManager{
     std::vector<t_shader_info> shaders = {
 		{ GL_VERTEX_SHADER, "Shaders/general.vert" },
 		{ GL_FRAGMENT_SHADER, "Shaders/general.frag" }
+    };
+    
+    std::vector<t_shader_info> uiShaders = {
+		{ GL_VERTEX_SHADER, "Shaders/uiShader.vert" },
+		{ GL_FRAGMENT_SHADER, "Shaders/uiShader.frag" }
 	};
 
     public:
@@ -73,6 +78,7 @@ class RenderManager{
 
     static std::vector<GameObject*> gameObjects;
     std::vector<Mesh> meshes;
+    Mesh textsMesh;
 
 
 
@@ -83,7 +89,8 @@ class RenderManager{
     SDL_Window      *window;
     SDL_GLContext   glContext;
     int             glProgramId;
-    void _loadShader( void );
+    int             glUIProgramId;
+    int             _loadShader( std::vector<t_shader_info> shaders );
 
 
     // fonctions membres
@@ -91,6 +98,7 @@ class RenderManager{
     RenderManager(void);
     RenderManager(RenderManager const & src);
     RenderManager & operator=(RenderManager const & src);
+    std::vector<Vertex> create_letter_pos(int index);
 
     // fonctions non membres
 
