@@ -32,31 +32,31 @@ RenderManager::RenderManager(int w, int h){
             this->meshes[i].create_vao();
         }
     }
+    Mesh newMesh;
     this->textsMesh.name = "text";
     this->textsMesh.textureID = this->parser.parseTexture("text");
-    this->textsMesh.vertices = this->create_letter_pos(0);
-    this->textsMesh.create_vao();
+
 
     this->debug = 0;
 }
 
-std::vector<Vertex> RenderManager::create_letter_pos(int index){
+std::vector<Vertex> RenderManager::create_letter_pos(int index, int lettre){
     std::vector<Vertex> ret = {};
     Vertex v_1(
-        Vec3(0.0f, 0.0f, 0.1f),
-        Vec2(0.0001f, 0.0001f),
+        Vec3(0.8f - 0.1 * index, 0.8f, 0.1f),
+        Vec2(0.0125f + 0.062 * lettre, 0.7554f),
         Vec3(0.0f, 0.0f, 0.0f));
     Vertex v_2(
-        Vec3(0.0f, 1.0f ,0.1f),
-        Vec2(0.0001f, 0.999f),
-        Vec3(0.0f, 0.0f, 0.0f));
+        Vec3(0.8f - 0.1 * index, 0.9f ,0.1f),
+        Vec2(0.0125f + 0.062 * lettre, 0.8071f),
+        Vec3(0.0f, 0.8f, 0.0f));
     Vertex v_3(
-        Vec3(1.0f, 0.0f, 0.1f),
-        Vec2(0.9999f, 0.0001f),
+        Vec3(0.9f - 0.1 * index, 0.8f, 0.1f),
+        Vec2(0.0539f + 0.062 * lettre, 0.7554f),
         Vec3(0.0f, 0.0f, 0.0f));
     Vertex v_4(
-        Vec3(1.0f, 1.0f, 0.1f),
-        Vec2(0.9999f, 0.9999f),
+        Vec3(0.9f - 0.1 * index, 0.9f, 0.1f),
+        Vec2(0.0539f + 0.062 * lettre, 0.8071f),
         Vec3(0.0f, 0.0f, 0.0f));
     ret.push_back(v_1);
     ret.push_back(v_2);
@@ -185,9 +185,19 @@ void RenderManager::draw(void){
     glUseProgram(this->glUIProgramId);
     
     glBindTexture(GL_TEXTURE_2D, this->textsMesh.textureID);
-    glBindVertexArray(this->textsMesh.vao);
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, this->textsMesh.vertices.size());
 
+    int index = 0;
+    int tmpScore = int(this->score);
+
+    while (tmpScore != 0){
+        index++;
+        this->textsMesh.vertices = this->create_letter_pos(index, tmpScore % 10);
+        this->textsMesh.create_vao();
+        glBindVertexArray(this->textsMesh.vao);
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, this->textsMesh.vertices.size());
+        tmpScore /= 10;
+    }
+    
     SDL_GL_SwapWindow(this->window);
 }
 
@@ -204,7 +214,4 @@ void RenderManager::showFPS(float FPS, int frameIndex ){
     sprintf(str, "%.1f pour %lu objects", mo/30, this->gameObjects.size());
     SDL_SetWindowTitle(this->window, str);
     mo = 0;
-
-    sprintf(str, "distance : %d ", int(this->score));
-    SDL_SetWindowTitle(this->window, str);
 }

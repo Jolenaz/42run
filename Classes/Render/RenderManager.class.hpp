@@ -98,7 +98,7 @@ class RenderManager{
     RenderManager(void);
     RenderManager(RenderManager const & src);
     RenderManager & operator=(RenderManager const & src);
-    std::vector<Vertex> create_letter_pos(int index);
+    std::vector<Vertex> create_letter_pos(int index, int letter);
 
     // fonctions non membres
 
