@@ -3,7 +3,7 @@
 Project in C++11 and OpenGL 4.1
 No Engine Use, all made by myself (I have pore graphic skills, sory about that)
 
-to install you need SDL2 and SDL_ttf on MacOS
+to install you need SDL2 and SDL_ttf on Mac OSX
 
 ./brew install sdl2
 
