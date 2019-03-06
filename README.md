@@ -6,6 +6,7 @@ No Engine Use, all made by myself (I have pore graphic skills, sory about that)
 to install you need SDL2 and SDL_ttf on MacOS
 
 ./brew install sdl2
+
 ./brew install sdl_ttf
 
 on the following commande line change path to find sdl2 and sdl_ttf include
